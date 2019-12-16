@@ -10,6 +10,8 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Date;
 
+import static utilities.UserNameFormatter.formatUsersToString;
+
 public class RootHandler implements HttpHandler {
     private HashMapDB DB;
 
@@ -19,18 +21,10 @@ public class RootHandler implements HttpHandler {
 
     private String collectNames() {
         ArrayList<String> collectionOfNamesFromDB = DB.getAllUsersNames();
-        StringBuilder collectNamesForGreeting = new StringBuilder();
-
-        for (String userName : collectionOfNamesFromDB) {
-            collectNamesForGreeting.append(userName);
-            if (collectionOfNamesFromDB.size() >1 && collectionOfNamesFromDB.get(collectionOfNamesFromDB.size() - 1).equals(userName)) {
-                collectNamesForGreeting.append(" and ");
-            } else {
-                collectNamesForGreeting.append(", ");
-            }
-        }
-        return collectNamesForGreeting.toString();
+        return formatUsersToString(collectionOfNamesFromDB);
     }
+
+
 
     @Override
     public void handle(HttpExchange t) throws IOException {

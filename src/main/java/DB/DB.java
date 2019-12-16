@@ -14,4 +14,12 @@ interface DB {
     ArrayList<String> getAllUsersNames();
 
     void deleteUserByID(long ID);
+
+    long getUserID(String name);
+
+    void deleteUserByName(String name);
+
+    void updateUserName(String queryName, String replacementName);
+
+    Person getUserByName(String name);
 }
