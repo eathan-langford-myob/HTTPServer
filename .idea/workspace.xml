@@ -2,13 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a84f8b9-9706-46af-9b62-0f31a563b92a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/handlers/AllUsersHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/handlers/DeleteHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/handlers/PutHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/RequestValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/UserNameFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/handlers/DeleteHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/hotswap_agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/DB/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/DB/UserDB.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/controllers/UsersController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/handlers/DeleteUserHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/handlers/GetUserHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/handlers/GreetingHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/handlers/PostUserHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/handlers/PutUserHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/utilities/Constants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/utilities/HttpRequestValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/utilities/HttpUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/utilities/UserStringFormatter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/db/UserDBTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/db/UserTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/handlers/DeleteUserHandlerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/handlers/GetUserHandlerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/handlers/GreetingHandlerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/handlers/PostUserHandlerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/handlers/PutUserHandlerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/utilities/HttpRequestValidatorTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/utilities/HttpUtilsTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/utilities/UserStringFormatterTest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/utilities/UserStringFormatterTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/db.UserDBTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/db.UserTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.DeleteUserHandlerTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.GetUserHandlerTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.GreetingHandlerTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.PostUserHandlerTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.PutUserHandlerTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/utilities.HttpRequestValidatorTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/utilities.HttpUtilsTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/utilities.UserStringFormatterTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/db.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/handlers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/utilities.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-db.UserDBTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-db.UserTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.DeleteUserHandlerTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.GetUserHandlerTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.GreetingHandlerTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.PostUserHandlerTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.PutUserHandlerTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-utilities.HttpRequestValidatorTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-utilities.HttpUtilsTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-utilities.UserStringFormatterTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/db/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/handlers/DeleteUserHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/handlers/GetUserHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/handlers/PostUserHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/handlers/PutUserHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/HttpRequestValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/HttpUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/db/UserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/handlers/DeleteUserHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/handlers/GetUserHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/handlers/GreetingHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/handlers/PutUserHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/HttpRequestValidatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/HttpUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/UserStringFormatterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -21,28 +83,37 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/DB/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/DB/DB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DB/HashMapDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/DB/HashMapDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DB/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/DB/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/handlers/PostHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/handlers/PostHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/handlers/RootHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/handlers/RootHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DB/HashMapDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DB/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/handlers/AllUsersHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/handlers/DeleteHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/handlers/PostHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/handlers/PutHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/handlers/RootHandler.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/server/RootHandlerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.PostHandlerTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/handlers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.PostHandlerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/utilities/RequestValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/utilities/UserNameFormatter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/DB/HashMapDBTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/handlers/DeleteHandlerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/handlers/PostHandlerTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/HashMapDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/HashMapDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handlers/PostHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handlers/PostHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handlers/RootHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handlers/RootHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/goals.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/goals.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/HashMapDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/UserDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/handlers/AllUsersHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/handlers/DeleteHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/handlers/PostHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/handlers/PutHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/handlers/RootHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handlers/GreetingHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/RequestValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/UserNameFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/UserStringFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DB/HashMapDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/db/UserDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/handlers/DeleteHandlerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/handlers/PostHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/handlers/PostUserHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/handlers/RootHandlerTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -79,6 +150,16 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Hello-World" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Hello-World" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Hello-World" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -89,22 +170,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/goals.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="256">
-                <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/handlers/PostHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utilities/HttpUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="27" column="20" selection-end-line="41" />
+            <state relative-caret-position="210">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,105 +182,110 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/handlers/PutHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+            <state relative-caret-position="-208">
+              <caret line="32" column="31" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/db/DB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/db/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utilities/HttpRequestValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="11" column="80" lean-forward="true" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/handlers/GetUserHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/handlers/PostUserHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/db/UserDB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/handlers/RootHandlerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/handlers/DeleteHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DB/HashMapDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1708#1709#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DB/Person.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-              <folding>
-                <element signature="e#92#93#0" expanded="true" />
-                <element signature="e#124#125#0" expanded="true" />
-                <element signature="e#155#156#0" expanded="true" />
-                <element signature="e#182#183#0" expanded="true" />
-                <element signature="e#254#255#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/server/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/HashMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="605" column="13" selection-start-line="605" selection-start-column="13" selection-end-line="605" selection-end-column="13" />
-              <folding>
-                <element signature="e#24218#24219#0" expanded="true" />
-                <element signature="e#24283#24284#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DB/DB.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/handlers/DeleteUserHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utilities/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -222,6 +296,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -230,6 +305,8 @@
       <find>test</find>
       <find>if</find>
       <find>&amp;&amp;</find>
+      <find>local</find>
+      <find>localhost</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -238,37 +315,63 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/handlers/AddHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/test/java/handlers/PostHandler.java" />
-        <option value="$PROJECT_DIR$/src/test/java/DB/DBMock.java" />
-        <option value="$PROJECT_DIR$/src/test/java/DB/sdfsdfssdffsd.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Util/UserParse.java" />
-        <option value="$PROJECT_DIR$/src/test/java/DB/DBTest.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/test/java/server/ServerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/handlers/PostHandlerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/handlers/PostHandler.java" />
-        <option value="$PROJECT_DIR$/src/test/java/handlers/DeleteHandlerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/DB/HashMapDBTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/handlers/DeleteHandler.java" />
-        <option value="$PROJECT_DIR$/src/test/java/handlers/RootHandlerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/utilities/RequestValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/handlers/RootHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utilities/UserNameFormatter.java" />
         <option value="$PROJECT_DIR$/src/main/java/handlers/AllUsersHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/HashMapDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/DB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/handlers/PutHandler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/handlers/RootHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/persondatabase/HashMapDBTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/databse/HashMapDBTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/database/HashMapDBTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/PERSONDATABASE/HashMapDBTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dbS/HashMapDBTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Dbs/HashMapDBTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dbs1/HashMapDBTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/DB/HashMapDBTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/db/HashMapDBTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/handlers/UsersHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/handlers/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/Rules.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/OutputMessages_en.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/db/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/handlers/HttpUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/httpRequestValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/handlers/DeleteUserHandler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/handlers/PostUserHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/handlers/PutUserHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/handlers/GreetingHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/handlers/DeleteUserHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/db/UserDBTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/UserDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/User.java" />
+        <option value="$PROJECT_DIR$/src/test/java/db/UserTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/DB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/Constants_en.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/UserNameFormatter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/server/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/handlers/PostUserHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/handlers/PutUserHandler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/utilities/HttpUtilsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/HttpUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/handlers/GetUserHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/HttpRequestValidator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/utilities/UserStringFormatterTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/handlers/GreetingHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utilities/UserStringFormatter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/utilities/HttpRequestValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/handlers/GetUserHandler.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="977" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -276,6 +379,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -286,6 +391,16 @@
             <path>
               <item name="Hello-World" type="b2602c69:ProjectViewProjectNode" />
               <item name="Hello-World" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hello-World" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hello-World" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="gradle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hello-World" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hello-World" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -307,7 +422,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DB" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hello-World" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hello-World" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Hello-World" type="b2602c69:ProjectViewProjectNode" />
@@ -352,7 +475,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DB" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Hello-World" type="b2602c69:ProjectViewProjectNode" />
@@ -362,36 +485,54 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="handlers" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Hello-World" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hello-World" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/utilities" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="utilities" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/utilities" />
     </key>
   </component>
   <component name="Regex">
@@ -417,7 +558,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.RootHandlerTest.rootEndpointDisplaysFirstPersonInDatabaseInGreeting">
+  <component name="RunManager" selected="Gradle.Tests in 'Hello-World.test'">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Hello-World.main" />
@@ -425,12 +566,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostHandlerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HttpRequestValidatorTest.shouldReturnFalse_WhenAddressEndsWithInvalidIDRequest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;handlers.PostHandlerTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;utilities.HttpRequestValidatorTest.shouldReturnFalse_WhenAddressEndsWithInvalidIDRequest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -445,12 +586,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RootHandlerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HttpRequestValidatorTest.shouldReturnTrue_WhenRequestAddressIsRoot" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;server.RootHandlerTest&quot; --info" />
+        <option name="scriptParameters" value="--tests &quot;utilities.HttpRequestValidatorTest.shouldReturnTrue_WhenRequestAddressIsRoot&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -465,12 +606,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RootHandlerTest.rootEndpointDisplaysFirstPersonInDatabaseInGreeting" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'Hello-World.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;server.RootHandlerTest.rootEndpointDisplaysFirstPersonInDatabaseInGreeting&quot;" />
+        <option name="scriptParameters" value="--tests *" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -485,12 +626,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RootHandlerTest.rootEndpointDisplaysWelcomeMessageWithTime" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserStringFormatterTest.shouldFormatNamesWithAppropriateSeparators_WhenGivenNamesFromDB" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;server.RootHandlerTest.rootEndpointDisplaysWelcomeMessageWithTime&quot;" />
+        <option name="scriptParameters" value="--tests &quot;utilities.UserStringFormatterTest.shouldFormatNamesWithAppropriateSeparators_WhenGivenNamesFromDB&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -505,13 +646,20 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Gradle.HttpRequestValidatorTest.shouldReturnFalse_WhenAddressEndsWithInvalidIDRequest" />
+      <item itemvalue="Gradle.HttpRequestValidatorTest.shouldReturnTrue_WhenRequestAddressIsRoot" />
+      <item itemvalue="Gradle.UserStringFormatterTest.shouldFormatNamesWithAppropriateSeparators_WhenGivenNamesFromDB" />
+      <item itemvalue="Gradle.Tests in 'Hello-World.test'" />
+      <item itemvalue="Application.Main" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RootHandlerTest.rootEndpointDisplaysFirstPersonInDatabaseInGreeting" />
-        <item itemvalue="Gradle.RootHandlerTest" />
+        <item itemvalue="Gradle.Tests in 'Hello-World.test'" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.RootHandlerTest.rootEndpointDisplaysWelcomeMessageWithTime" />
-        <item itemvalue="Gradle.PostHandlerTest" />
+        <item itemvalue="Gradle.UserStringFormatterTest.shouldFormatNamesWithAppropriateSeparators_WhenGivenNamesFromDB" />
+        <item itemvalue="Gradle.HttpRequestValidatorTest.shouldReturnTrue_WhenRequestAddressIsRoot" />
+        <item itemvalue="Gradle.HttpRequestValidatorTest.shouldReturnFalse_WhenAddressEndsWithInvalidIDRequest" />
       </list>
     </recent_temporary>
   </component>
@@ -529,68 +677,81 @@
       <workItem from="1575436282090" duration="12098000" />
       <workItem from="1575579750248" duration="19635000" />
       <workItem from="1576102162162" duration="42805000" />
+      <workItem from="1576462326383" duration="2273000" />
+      <workItem from="1576469125078" duration="4636000" />
+      <workItem from="1576629322743" duration="2267000" />
+      <workItem from="1576638179753" duration="403000" />
+      <workItem from="1576638621933" duration="54000" />
+      <workItem from="1576638690415" duration="7318000" />
+      <workItem from="1576660988636" duration="26491000" />
+      <workItem from="1576729033983" duration="13046000" />
+      <workItem from="1576797566469" duration="4928000" />
+      <workItem from="1577227519369" duration="7893000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RootHandlerTest - 2019.12.14 at 00h 43m 17s.xml">
-      <configuration name="RootHandlerTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="HttpRequestValidatorTest_shouldReturnTrue_WhenAddressEndsWithValidIDRequest - 2020.01.05 at 01h 01m 43s.xml">
+      <configuration name="HttpRequestValidatorTest.shouldReturnTrue_WhenAddressEndsWithValidIDRequest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RootHandlerTest - 2019.12.14 at 00h 43m 57s.xml">
-      <configuration name="RootHandlerTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="HttpRequestValidatorTest_shouldReturnFalse_WhenAddressEndsWithInvalidIDRequest - 2020.01.05 at 01h 02m 24s.xml">
+      <configuration name="HttpRequestValidatorTest.shouldReturnFalse_WhenAddressEndsWithInvalidIDRequest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="PostHandlerTest - 2019.12.14 at 00h 45m 41s.xml">
-      <configuration name="PostHandlerTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="HttpRequestValidatorTest_shouldReturnTrue_WhenRequestAddressIsRoot - 2020.01.05 at 01h 03m 22s.xml">
+      <configuration name="HttpRequestValidatorTest.shouldReturnTrue_WhenRequestAddressIsRoot" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RootHandlerTest - 2019.12.14 at 00h 46m 20s.xml">
-      <configuration name="RootHandlerTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="UserStringFormatterTest_shouldFormatNamesWithAppropriateSeparators_WhenGivenNamesFromDB - 2020.01.05 at 02h 19m 56s.xml">
+      <configuration name="UserStringFormatterTest.shouldFormatNamesWithAppropriateSeparators_WhenGivenNamesFromDB" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RootHandlerTest_rootEndpointDisplaysWelcomeMessageWithTime - 2019.12.14 at 00h 48m 06s.xml">
-      <configuration name="RootHandlerTest.rootEndpointDisplaysWelcomeMessageWithTime" configurationId="GradleRunConfiguration" />
+    <history-entry file="Tests_in_'Hello-World_test' - 2020.01.05 at 02h 21m 03s.xml">
+      <configuration name="Tests in 'Hello-World.test'" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RootHandlerTest_rootEndpointDisplaysFirstPersonInDatabaseInGreeting - 2019.12.14 at 00h 48m 09s.xml">
-      <configuration name="RootHandlerTest.rootEndpointDisplaysFirstPersonInDatabaseInGreeting" configurationId="GradleRunConfiguration" />
+    <history-entry file="Tests_in_'Hello-World_test' - 2020.01.05 at 02h 23m 58s.xml">
+      <configuration name="Tests in 'Hello-World.test'" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RootHandlerTest_rootEndpointDisplaysWelcomeMessageWithTime - 2019.12.14 at 00h 48m 19s.xml">
-      <configuration name="RootHandlerTest.rootEndpointDisplaysWelcomeMessageWithTime" configurationId="GradleRunConfiguration" />
+    <history-entry file="Tests_in_'Hello-World_test' - 2020.01.05 at 02h 26m 23s.xml">
+      <configuration name="Tests in 'Hello-World.test'" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RootHandlerTest_rootEndpointDisplaysWelcomeMessageWithTime - 2019.12.14 at 00h 48m 22s.xml">
-      <configuration name="RootHandlerTest.rootEndpointDisplaysWelcomeMessageWithTime" configurationId="GradleRunConfiguration" />
+    <history-entry file="Tests_in_'Hello-World_test' - 2020.01.06 at 13h 07m 15s.xml">
+      <configuration name="Tests in 'Hello-World.test'" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RootHandlerTest - 2019.12.16 at 13h 10m 39s.xml">
-      <configuration name="RootHandlerTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="HttpRequestValidatorTest_isValidIdRequest - 2020.01.06 at 13h 07m 20s.xml">
+      <configuration name="HttpRequestValidatorTest.isValidIdRequest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="RootHandlerTest_rootEndpointDisplaysFirstPersonInDatabaseInGreeting - 2019.12.16 at 13h 11m 08s.xml">
-      <configuration name="RootHandlerTest.rootEndpointDisplaysFirstPersonInDatabaseInGreeting" configurationId="GradleRunConfiguration" />
+    <history-entry file="Tests_in_'Hello-World_test' - 2020.01.06 at 13h 07m 38s.xml">
+      <configuration name="Tests in 'Hello-World.test'" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74867000" />
+    <option name="totallyTimeSpent" value="144176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17571884" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13099042" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="JRebel" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.34004024" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.42152917" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39839035" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3249497" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.33299798" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38344827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32911393" />
       <window_info anchor="bottom" id="Regex" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32987553" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32696176" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50061053" side_tool="true" weight="0.46576762" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="JRebel Console" order="14" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -598,10 +759,11 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="UML design tool window" order="6" />
-      <window_info active="true" anchor="right" id="Gradle" order="7" visible="true" weight="0.32960597" />
+      <window_info anchor="right" id="Gradle" order="7" weight="0.32960597" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="11" weight="0.32960597" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,24 +773,29 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/test/java/handlers/PostHandlerTest.java</url>
-          <line>13</line>
-          <properties field="server" class="handlers.PostHandlerTest" />
+          <url>file://$PROJECT_DIR$/src/test/java/handlers/PostUserHandlerTest.java</url>
+          <line>14</line>
+          <properties field="server" class="handlers.PostUserHandlerTest" />
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/handlers/DeleteUserHandlerTest.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/utilities/HttpRequestValidatorTest.java</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/DB_ID.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/DB/DBMock.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Util/UserParse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Util/UserParse.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/statements/RunBefores.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -647,28 +814,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/reports/tests/test/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/server/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build/reports/tests/test/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/server/ServerTest.java" />
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -724,116 +871,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DB/HashMapDBTest.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="294">
+          <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/handlers/PostHandlerTest.java">
+    <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/handlers/DeleteHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/RequestValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/handlers/RootHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/UserNameFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/handlers/AllUsersHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/goals.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="256">
-            <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/handlers/DeleteHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/handlers/PostHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="20" selection-end-line="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="11781">
           <caret line="605" column="13" selection-start-line="605" selection-start-column="13" selection-end-line="605" selection-end-column="13" />
           <folding>
             <element signature="e#24218#24219#0" expanded="true" />
@@ -842,23 +896,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/Person.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/jdk.httpserver/com/sun/net/httpserver/Filter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        <state relative-caret-position="-557">
+          <caret line="55" column="27" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/Rules.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/jdk.httpserver/com/sun/net/httpserver/HttpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="132" column="29" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/goals.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="566">
+            <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/handlers/PostUserHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="30" selection-start-line="30" selection-end-line="32" selection-end-column="90" />
           <folding>
-            <element signature="e#92#93#0" expanded="true" />
-            <element signature="e#124#125#0" expanded="true" />
-            <element signature="e#155#156#0" expanded="true" />
-            <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/DB.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/handlers/DeleteUserHandlerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
+        <state relative-caret-position="298">
+          <caret line="42" column="93" selection-start-line="42" selection-start-column="93" selection-end-line="42" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/Constants_en.properties" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/jdk.httpserver/com/sun/net/httpserver/HttpExchange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="66" column="22" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/handlers/PutUserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.rest-assured/rest-assured/4.1.2/2ca0ee9995d7de20c0e3ee6cf5916208ad29fcb9/rest-assured-4.1.2-sources.jar!/io/restassured/response/ResponseBodyData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/handlers/PutUserHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/io/InputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/handlers/GetUserHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="53" column="63" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/db/UserDBTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -866,43 +1003,199 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/db/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/utilities/HttpUtilsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/handlers/GreetingHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/utilities/UserStringFormatterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/handlers/GreetingHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/UserStringFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/utilities/HttpRequestValidatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="20" column="64" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        <state relative-caret-position="427">
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/HashMapDB.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/jdk.httpserver/com/sun/net/httpserver/HttpHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+        <state relative-caret-position="231">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home/lib/src.zip!/java.base/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="463" column="18" selection-start-line="463" selection-start-column="18" selection-end-line="463" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/handlers/PostUserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1708#1709#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/handlers/PutHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/HttpUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        <state relative-caret-position="210">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/handlers/RootHandlerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/handlers/GetUserHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="233">
+          <caret line="30" column="60" lean-forward="true" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/HttpRequestValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="11" column="80" lean-forward="true" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/DB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/UserDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/handlers/DeleteUserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -959,7 +1252,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>main|Hello-World</last-edited>
+          <last-edited>test|Hello-World</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

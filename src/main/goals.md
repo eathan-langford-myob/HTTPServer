@@ -17,7 +17,7 @@ Their requirements are as follows:
 
 * You should then be able to add Sue to your hello world, ```"Hello Bob, Mary and Sue - the time on the server is 10:59pm on 14 March 2018"```
 
-_ADDING_ : POST request to add to a local database, ie: an Array of Users or key value pairing with an ID.
+_ADDING_ : POST request to add to a local db, ie: an Array of Users or key value pairing with an ID.
 
 _READING_ : GET request to get the users Array, display users. 
 

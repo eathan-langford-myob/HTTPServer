@@ -1,0 +1,63 @@
+package db;
+
+import utilities.Constants;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class UserDB implements DB {
+    private HashMap<Long, User> users = new HashMap<Long, User>();
+    private long ID = users.size() + 1;
+
+    public UserDB() {
+        this.addUser(new User(Constants.admin_name));
+    }
+
+    @Override
+    public User getUserByID(long ID) {
+        if (users.containsKey(ID)) {
+            return users.get(ID);
+        }
+        return null;
+    }
+
+    @Override
+    public void addUser(User userName) {
+        users.put(ID, userName);
+        ID++;
+
+    }
+
+    @Override
+    public ArrayList<String> getAllUsersNames() {
+        ArrayList<String> collectNamesFromDB = new ArrayList<>();
+        for (User user : users.values()) {
+            collectNamesFromDB.add(user.getName());
+        }
+        return collectNamesFromDB;
+    }
+
+    @Override
+    public ArrayList<String> getAllDbEntries() {
+        ArrayList<String> collectEntriesFromDb = new ArrayList<>();
+        users.forEach((ID, user)-> collectEntriesFromDb.add(ID+","+user.getName()));
+        return collectEntriesFromDb;
+    }
+
+    @Override
+    public void deleteUserByID(long ID) {
+            users.remove(ID);
+    }
+
+    @Override
+    public long getUserID(String name) {
+       return users.entrySet().stream().filter(entry -> entry.getValue().getName().equalsIgnoreCase(name)).findFirst().get().getKey();
+    }
+
+    @Override
+    public void updateUserName(String queryName, String replacementName) {
+        long ID = getUserID(queryName);
+        users.get(ID).setName(replacementName);
+    }
+}
+

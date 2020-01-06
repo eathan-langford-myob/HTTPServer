@@ -1,29 +1,35 @@
 package server;
 
-import DB.HashMapDB;
 import com.sun.net.httpserver.HttpServer;
-import handlers.*;
+import controllers.UsersController;
+import db.UserDB;
+import handlers.GreetingHandler;
+import utilities.Constants;
 
 import java.net.InetSocketAddress;
 
 public class Server {
+    private HttpServer server;
+
     public void createServerConnection() throws Exception {
-        HashMapDB database = new HashMapDB();
-        System.out.println("Database created");
-        HttpServer server = HttpServer.create(new InetSocketAddress(4000), 0);
-        System.out.println("Server created");
-        server.createContext("/", new RootHandler(database));
-        System.out.println("Root created");
-        server.createContext("/post", new PostHandler(database));
-        System.out.println("Post created");
-        server.createContext("/delete", new DeleteHandler(database));
-        System.out.println("Delete created");
-        server.createContext("/allUsers", new AllUsersHandler(database));
-        System.out.println("All Users Endpoint created");
-        server.createContext("/put", new PutHandler(database));
-        System.out.println("Put Endpoint created");
-        server.setExecutor(null); // creates a default executor
+        UserDB database = new UserDB();
+        System.out.println(Constants.database_success);
+
+        server = HttpServer.create(new InetSocketAddress(Constants.port), 0);
+        System.out.println(Constants.server_start);
+
+        server.createContext(Constants.root_address, new GreetingHandler(database));
+        System.out.println(Constants.root_success);
+
+        server.createContext("/users", new UsersController(database));
+        System.out.println(Constants.users_endpoint_success);
+
+        server.setExecutor(null);
         server.start();
-        System.out.println("Server started");
+        System.out.println(Constants.server_success);
+    }
+
+    public void closeServerConnection() {
+        server.stop(1);
     }
 }
