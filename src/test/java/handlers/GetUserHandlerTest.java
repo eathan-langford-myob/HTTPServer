@@ -1,20 +1,27 @@
 package handlers;
 
+import db.User;
+import db.UserDB;
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import server.Server;
-import utilities.Constants;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class GetUserHandlerTest {
     private Server server;
+    private User admin = new User("Eathan");
+    private UserDB DB;
+    private String usersPath = System.getenv("LOCAL_ADDRESS") + System.getenv("PORT") + System.getenv("ROOT_ADDRESS") + System.getenv("USERS_ENDPOINT");
+
     @Before
     public void setUp() throws Exception {
-        server = new Server();
+        DB = new UserDB();
+        DB.addUser(admin);
+        server = new Server(DB);
         server.createServerConnection();
     }
 
@@ -28,9 +35,9 @@ public class GetUserHandlerTest {
     public void shouldGetUser_WhenGivenID() {
         RequestSpecification request = RestAssured.given();
         request.body("Barry");
-        request.post(Constants.local_address+Constants.port+Constants.users_endpoint);
+        request.post(usersPath);
 
-        request.get(Constants.local_address+Constants.port+Constants.users_endpoint+"/2")
+        request.get(usersPath+"/2")
                 .then()
                 .body(equalTo("barry"));
     }
@@ -38,19 +45,19 @@ public class GetUserHandlerTest {
     @Test
     public void shouldReturnErrorBody_WhenGivenWrongID() {
         RequestSpecification request = RestAssured.given();
-        request.get(Constants.local_address+Constants.port+Constants.users_endpoint+"/2")
+        request.get(usersPath+"/2")
                 .then()
-                .body(equalTo(Constants.error_getting_user));
+                .body(equalTo("Something went wrong getting User"));
     }
 
     @Test
     public void shouldReturnAllUsers_WhenHittingUsersEndpoint() {
         RequestSpecification request = RestAssured.given();
         request.body("Harry");
-        request.post(Constants.local_address+Constants.port+Constants.users_endpoint);
+        request.post(usersPath);
 
-        request.get(Constants.local_address+Constants.port+Constants.users_endpoint)
+        request.get(usersPath)
                 .then()
-                .body(equalTo("[" +"1," + Constants.admin_name +", "+ "2,harry" + "]"));
+                .body(equalTo("[" +"1," + admin.getName() +", "+ "2,harry" + "]"));
     }
 }

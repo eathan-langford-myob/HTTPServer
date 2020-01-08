@@ -1,5 +1,7 @@
 package handlers;
 
+import db.User;
+import db.UserDB;
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
 import org.junit.After;
@@ -13,9 +15,16 @@ import static org.hamcrest.CoreMatchers.containsString;
 
 public class PutUserHandlerTest {
     private Server server;
+    private User admin = new User("Eathan");
+    private UserDB DB;
+    private String usersPath = System.getenv("LOCAL_ADDRESS") + System.getenv("PORT") + System.getenv("ROOT_ADDRESS") + System.getenv("USERS_ENDPOINT");
+
+
     @Before
     public void setUp() throws Exception {
-        server = new Server();
+        DB = new UserDB();
+        DB.addUser(admin);
+        server = new Server(DB);
         server.createServerConnection();
     }
 
@@ -30,13 +39,13 @@ public class PutUserHandlerTest {
     public void putEndpointUpdatesUserName() {
         RequestSpecification request = RestAssured.given();
         request.body("Barry");
-        request.post(Constants.local_address+Constants.port+Constants.users_endpoint);
+        request.post(usersPath);
 
         request.body("Barry, Larry");
-        request.put(Constants.local_address+Constants.port+Constants.users_endpoint+"/2");
+        request.put(usersPath +"/2");
 
         when().
-                get(Constants.local_address+Constants.port+Constants.users_endpoint).
+                get(usersPath).
                 then().
                 statusCode(200).
                 body(containsString("larry"));
@@ -48,7 +57,7 @@ public class PutUserHandlerTest {
         request.body("Barry, Larry");
 
         when().
-                put(Constants.local_address+Constants.port+Constants.users_endpoint+"/2").
+                put(usersPath +"/2").
                 then().
                 statusCode(200).
                 body(containsString(Constants.error_put_user));

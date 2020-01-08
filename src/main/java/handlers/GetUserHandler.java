@@ -6,6 +6,7 @@ import com.sun.net.httpserver.HttpHandler;
 import db.User;
 import db.UserDB;
 import utilities.Constants;
+import utilities.DBValidator;
 import utilities.HttpRequestValidator;
 import utilities.HttpUtils;
 
@@ -13,6 +14,7 @@ import java.io.IOException;
 
 public class GetUserHandler implements HttpHandler {
     private UserDB DB;
+    public static final String error_getting_user = "Something went wrong getting User";
 
     public GetUserHandler(UserDB database) {
         this.DB = database;
@@ -20,7 +22,6 @@ public class GetUserHandler implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        System.out.println("GetUser handler method");
         Headers responseHeaders = exchange.getResponseHeaders();
         responseHeaders.set("Content-Type", "text/html");
         String path = exchange.getRequestURI().getPath();
@@ -31,12 +32,12 @@ public class GetUserHandler implements HttpHandler {
         if (HttpRequestValidator.isAllUsersEndpoint(path)) {
             HttpUtils.writeResponse(exchange, DB.getAllDbEntries().toString());
 
-        } else if (HttpRequestValidator.isIdEndpoint(path, Constants.users_endpoint) && HttpRequestValidator.isUserInDatabase(DB, HttpUtils.getIdFromPath(path))) {
+        } else if (HttpRequestValidator.isIdEndpoint(path, Constants.users_endpoint) && DBValidator.isUserInDatabase(DB, HttpUtils.getIdFromPath(path))) {
             Integer query = HttpUtils.getIdFromPath(path);
             User queryUser = DB.getUserByID(query);
             HttpUtils.writeResponse(exchange, queryUser.getName());
         } else {
-            HttpUtils.writeResponse(exchange, Constants.error_getting_user);
+            HttpUtils.writeResponse(exchange, error_getting_user);
         }
     }
 }

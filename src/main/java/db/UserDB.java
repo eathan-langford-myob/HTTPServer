@@ -1,16 +1,13 @@
 package db;
 
-import utilities.Constants;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class UserDB implements DB {
-    private HashMap<Long, User> users = new HashMap<Long, User>();
-    private long ID = users.size() + 1;
+    private HashMap<Long, User> users = new HashMap<>();
+    private long ID = 1;
 
     public UserDB() {
-        this.addUser(new User(Constants.admin_name));
     }
 
     @Override

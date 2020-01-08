@@ -8,45 +8,50 @@ import handlers.DeleteUserHandler;
 import handlers.GetUserHandler;
 import handlers.PostUserHandler;
 import handlers.PutUserHandler;
-import utilities.Constants;
 import utilities.HttpUtils;
 
 import java.io.IOException;
 
 public class UsersController implements HttpHandler {
-    private GetUserHandler getRequest;
-    private PostUserHandler postRequest;
-    private PutUserHandler putRequest;
-    private DeleteUserHandler deleteRequest;
+    private GetUserHandler getHandler;
+    private PostUserHandler postHandler;
+    private PutUserHandler putHandler;
+    private DeleteUserHandler deleteHandler;
+    public static final String getRequestString = "get";
+    public static final String postRequestString = "post";
+    public static final String deleteRequestString = "delete";
+    public static final String updateRequestString = "put";
 
 
     public UsersController(UserDB database) {
-        getRequest = new GetUserHandler(database);
-        postRequest = new PostUserHandler(database);
-        putRequest = new PutUserHandler(database);
-        deleteRequest = new DeleteUserHandler(database);
+        getHandler = new GetUserHandler(database);
+        postHandler = new PostUserHandler(database);
+        putHandler = new PutUserHandler(database);
+        deleteHandler = new DeleteUserHandler(database);
     }
 
     private void callRequestHandler(HttpExchange exchange, String httpRequest) throws IOException {
-        System.out.println("Request handler method");
         switch (httpRequest.toLowerCase()) {
-            case (Constants.get):
-                requestMethodCall(getRequest, exchange);
+            case (getRequestString):
+                requestMethodCall(getHandler, exchange);
                 break;
-            case (Constants.post) :
-                requestMethodCall(postRequest, exchange);
+            case (postRequestString):
+                requestMethodCall(postHandler, exchange);
                 break;
-            case (Constants.update) :
-                requestMethodCall(putRequest, exchange);
+            case (updateRequestString):
+                requestMethodCall(putHandler, exchange);
                 break;
-            case (Constants.delete) :
-                requestMethodCall(deleteRequest, exchange);
+            case (deleteRequestString):
+                requestMethodCall(deleteHandler, exchange);
                 break;
+
+            default:
+
+
         }
     }
 
     private void requestMethodCall(HttpHandler requestMethod, HttpExchange exchange) throws IOException {
-        System.out.println("Request method call");
         try {
             requestMethod.handle(exchange);
         } catch (IOException error) {
@@ -57,7 +62,6 @@ public class UsersController implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        System.out.println("Users Controller handle method");
         Headers responseHeaders = exchange.getResponseHeaders();
         responseHeaders.set("Content-Type", "text/plain");
         callRequestHandler(exchange, exchange.getRequestMethod());

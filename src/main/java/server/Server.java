@@ -4,29 +4,32 @@ import com.sun.net.httpserver.HttpServer;
 import controllers.UsersController;
 import db.UserDB;
 import handlers.GreetingHandler;
-import utilities.Constants;
 
 import java.net.InetSocketAddress;
 
 public class Server {
     private HttpServer server;
+    private final String root_address = System.getenv("ROOT_ADDRESS");
+    private final String users_endpoint = System.getenv("USERS_ENDPOINT");
+    private final int port = Integer.parseInt(System.getenv("PORT"));
+    private UserDB DB;
+
+
+    public Server(UserDB DB){
+        this.DB = DB;
+    }
+
 
     public void createServerConnection() throws Exception {
-        UserDB database = new UserDB();
-        System.out.println(Constants.database_success);
+        System.out.println(System.getenv());
+        server = HttpServer.create(new InetSocketAddress(port), 0);
 
-        server = HttpServer.create(new InetSocketAddress(Constants.port), 0);
-        System.out.println(Constants.server_start);
+        server.createContext(root_address, new GreetingHandler(DB));
 
-        server.createContext(Constants.root_address, new GreetingHandler(database));
-        System.out.println(Constants.root_success);
-
-        server.createContext("/users", new UsersController(database));
-        System.out.println(Constants.users_endpoint_success);
+        server.createContext(users_endpoint, new UsersController(DB));
 
         server.setExecutor(null);
         server.start();
-        System.out.println(Constants.server_success);
     }
 
     public void closeServerConnection() {

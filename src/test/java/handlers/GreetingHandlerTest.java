@@ -1,12 +1,13 @@
 package handlers;
 
+import db.User;
+import db.UserDB;
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import server.Server;
-import utilities.Constants;
 
 import java.util.Date;
 
@@ -15,9 +16,18 @@ import static org.hamcrest.CoreMatchers.containsString;
 
 public class GreetingHandlerTest {
     private Server server;
+    private User admin = new User("Eathan");
+    private UserDB DB;
+    private String localPath = System.getenv("LOCAL_ADDRESS") + System.getenv("PORT");
+    private String usersPath = System.getenv("LOCAL_ADDRESS") + System.getenv("PORT") + System.getenv("ROOT_ADDRESS") + System.getenv("USERS_ENDPOINT");
+
+
+
     @Before
     public void setUp() throws Exception {
-        server = new Server();
+        DB = new UserDB();
+        DB.addUser(admin);
+        server = new Server(DB);
         server.createServerConnection();
     }
 
@@ -30,7 +40,7 @@ public class GreetingHandlerTest {
     @Test
     public void shouldDisplayGreeting_WhenHittingRootEndpoint() {
         when().
-                get(Constants.local_address+Constants.port).
+                get(localPath).
                 then().
                 statusCode(200).
                 body(containsString("the time on the server is - " + new Date()));
@@ -39,22 +49,22 @@ public class GreetingHandlerTest {
     @Test
     public void shouldDisplayAdminInGreeting_WhenHittingRootEndpoint() {
         when().
-                get(Constants.local_address+Constants.port).
+                get(localPath).
                 then().
                 statusCode(200).
-                body(containsString(Constants.admin_name));
+                body(containsString(admin.getName()));
     }
 
     @Test
     public void shouldDisplayAllUsersInGreeting_WhenDBHasMoreUsers() {
         RequestSpecification request = RestAssured.given();
         request.body("Larry");
-        request.post(Constants.local_address+Constants.port+Constants.users_endpoint);
+        request.post(usersPath);
 
         when().
-                get(Constants.local_address+Constants.port).
+                get(localPath).
                 then().
                 statusCode(200).
-                body(containsString(Constants.admin_name+" and Larry,"));
+                body(containsString(admin.getName()+" and Larry,"));
     }
 }

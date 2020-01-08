@@ -6,7 +6,7 @@ import com.sun.net.httpserver.HttpHandler;
 import db.User;
 import db.UserDB;
 import utilities.Constants;
-import utilities.HttpRequestValidator;
+import utilities.DBValidator;
 import utilities.HttpUtils;
 
 import java.io.IOException;
@@ -20,7 +20,6 @@ public class PutUserHandler implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        System.out.println("GetUser handler method");
         Headers responseHeaders = exchange.getResponseHeaders();
         responseHeaders.set("Content-Type", "text/html");
         String path = exchange.getRequestURI().getPath();
@@ -28,7 +27,7 @@ public class PutUserHandler implements HttpHandler {
     }
 
     private void calculatePutResponse(HttpExchange exchange, String path) throws IOException {
-        if (HttpRequestValidator.isValidUserRequest(path, DB)) {
+        if (DBValidator.isValidUserRequest(path, DB)) {
             Integer query = HttpUtils.getIdFromPath(path);
             User queryUser = DB.getUserByID(query);
             String newUserName = HttpUtils.getRequestFromBody(exchange.getRequestBody()).replace(" ","").split(",")[1];

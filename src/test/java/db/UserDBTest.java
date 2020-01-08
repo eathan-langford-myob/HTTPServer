@@ -3,7 +3,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import utilities.Constants;
 
 public class UserDBTest {
 
@@ -22,7 +21,7 @@ public class UserDBTest {
 
     @Test
     public void shouldAddAdmin_WhenDBInstantiates() {
-        Assert.assertTrue(database.getUserByID(1).getName().equalsIgnoreCase(Constants.admin_name));
+        Assert.assertTrue(database.getUserByID(1).getName().equalsIgnoreCase("Eathan"));
     }
 
     @Test
