@@ -1,16 +1,13 @@
 package db;
 
-import utilities.Constants;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class UserDB implements DB {
-    private HashMap<Long, User> users = new HashMap<Long, User>();
-    private long ID = users.size() + 1;
+    private HashMap<Long, User> users = new HashMap<>();
+    private long ID = 1;
 
     public UserDB() {
-        this.addUser(new User(Constants.admin_name));
     }
 
     @Override
@@ -46,12 +43,12 @@ public class UserDB implements DB {
 
     @Override
     public void deleteUserByID(long ID) {
-            users.remove(ID);
+        users.remove(ID);
     }
 
     @Override
     public long getUserID(String name) {
-       return users.entrySet().stream().filter(entry -> entry.getValue().getName().equalsIgnoreCase(name)).findFirst().get().getKey();
+        return users.entrySet().stream().filter(entry -> entry.getValue().getName().equalsIgnoreCase(name)).findFirst().get().getKey();
     }
 
     @Override
@@ -60,4 +57,3 @@ public class UserDB implements DB {
         users.get(ID).setName(replacementName);
     }
 }
-

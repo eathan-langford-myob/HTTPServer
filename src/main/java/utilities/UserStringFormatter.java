@@ -21,7 +21,7 @@ public class UserStringFormatter {
 
         for (String userName : collectionOfNamesFromDB) {
             collectNamesForGreeting.append(capitalize(userName));
-            if (HttpRequestValidator.hasMoreThanOneEntryInDB(collectionOfNamesFromDB) &&
+            if (DBValidator.hasMoreThanOneEntryInDB(collectionOfNamesFromDB) &&
                     isSecondLastInDB(collectionOfNamesFromDB, userName)) {
                 collectNamesForGreeting.append(" and ");
             } else {

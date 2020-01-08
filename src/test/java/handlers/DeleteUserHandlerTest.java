@@ -44,7 +44,7 @@ public class DeleteUserHandlerTest {
 
         request.get(Constants.local_address+Constants.port+Constants.users_endpoint+"/2")
                 .then()
-                .body(equalTo(Constants.error_getting_user));
+                .body(equalTo(.error_getting_user));
     }
 
     @Test
