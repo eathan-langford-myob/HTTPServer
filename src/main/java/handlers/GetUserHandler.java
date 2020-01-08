@@ -31,7 +31,7 @@ public class GetUserHandler implements HttpHandler {
         if (HttpRequestValidator.isAllUsersEndpoint(path)) {
             HttpUtils.writeResponse(exchange, DB.getAllDbEntries().toString(), StatusCodes.OK.getCode());
 
-        } else if (HttpRequestValidator.isIdEndpoint(path, Constants.users_endpoint) && DBValidator.isUserInDatabase(DB, HttpUtils.getIdFromPath(path))) {
+        } else if (HttpRequestValidator.isIdEndpoint(path, System.getenv("USER_ENDPOINT")) && DBValidator.isUserInDatabase(DB, HttpUtils.getIdFromPath(path))) {
             Integer query = HttpUtils.getIdFromPath(path);
             User queryUser = DB.getUserByID(query);
             HttpUtils.writeResponse(exchange, queryUser.getName(), StatusCodes.OK.getCode());

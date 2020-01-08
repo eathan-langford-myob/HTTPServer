@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handlers.GetUserHandlerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-08T22:41:11" hostname="C02Y30BAJG5J" time="3.094">
+<testsuite name="handlers.GetUserHandlerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-08T23:28:58" hostname="C02Y30BAJG5J" time="3.096">
   <properties/>
-  <testcase name="shouldReturnAllUsers_WhenHittingUsersEndpoint" classname="handlers.GetUserHandlerTest" time="1.028"/>
-  <testcase name="shouldReturnErrorBody_WhenGivenWrongID" classname="handlers.GetUserHandlerTest" time="1.026"/>
-  <testcase name="shouldGetUser_WhenGivenID" classname="handlers.GetUserHandlerTest" time="1.039"/>
+  <testcase name="shouldReturnAllUsers_WhenHittingUsersEndpoint" classname="handlers.GetUserHandlerTest" time="1.03"/>
+  <testcase name="shouldReturnErrorBody_WhenGivenWrongID" classname="handlers.GetUserHandlerTest" time="1.033"/>
+  <testcase name="shouldGetUser_WhenGivenID" classname="handlers.GetUserHandlerTest" time="1.031"/>
   <system-out><![CDATA[Server Created
 Put handler method
 Server Created

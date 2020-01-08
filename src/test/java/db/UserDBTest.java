@@ -10,7 +10,7 @@ public class UserDBTest {
     User adminUser;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         adminUser = new User("Eathan");
     }
 
@@ -19,10 +19,6 @@ public class UserDBTest {
         database = null;
     }
 
-//    @Test
-//    public void shouldAddAdmin_WhenDBInstantiates() {
-//        Assert.assertTrue(database.getUserByID(1).getName().equalsIgnoreCase(Constants.admin_name));
-//    }
 
     @Test
     public void shouldAddToDB_WhenAddingUser() {

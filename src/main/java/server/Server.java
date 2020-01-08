@@ -26,7 +26,7 @@ public class Server {
 
 
     public void createServerConnection() throws Exception {
-        server = HttpServer.create(new InetSocketAddress(4000), 0);
+        server = HttpServer.create(new InetSocketAddress(Integer.parseInt(System.getenv("PORT"))), 0);
 
         server.createContext(root_address, new GreetingHandler(DB, outputMessages));
 
@@ -34,7 +34,6 @@ public class Server {
 
         server.setExecutor(null);
         server.start();
-        System.out.println("Server Created");
     }
 
     public void closeServerConnection() {

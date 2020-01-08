@@ -16,7 +16,7 @@ public class HttpUtils {
     }
 
     public static Integer getIdFromPath(String path) {
-        return Integer.parseInt(path.split(Constants.users_endpoint)[1].replace("/", ""));
+        return Integer.parseInt(path.split(System.getenv("USER_ENDPOINT"))[1].replace("/", ""));
     }
 
     public static String getRequestFromBody(InputStream requestBody) {

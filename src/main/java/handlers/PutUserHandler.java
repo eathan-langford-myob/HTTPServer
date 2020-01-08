@@ -11,8 +11,6 @@ import utilities.StatusCodes;
 
 import java.io.IOException;
 import java.util.ResourceBundle;
-//private static String success_put_user = "User name updated successfully.";
-//private static String error_put_user = "Error updating Users name";
 
 public class PutUserHandler implements HttpHandler {
     private UserDB DB;
@@ -25,7 +23,6 @@ public class PutUserHandler implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        System.out.println("GetUser handler method");
         Headers responseHeaders = exchange.getResponseHeaders();
         responseHeaders.set("Content-Type", "text/html");
         String path = exchange.getRequestURI().getPath();

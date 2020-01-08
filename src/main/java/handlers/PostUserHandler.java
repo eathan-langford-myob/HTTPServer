@@ -23,7 +23,6 @@ public class PostUserHandler implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        System.out.println("Put handler method");
         Headers responseHeaders = exchange.getResponseHeaders();
         responseHeaders.set("Content-Type", "text/html");
         String path = exchange.getRequestURI().getPath();

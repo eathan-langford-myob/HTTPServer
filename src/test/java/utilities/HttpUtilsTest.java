@@ -11,7 +11,7 @@ import java.nio.charset.Charset;
 public class HttpUtilsTest {
 
     @Test
-    public void shouldExtractIDFromPath_WhenGivenStringOfPathh() {
+    public void shouldExtractIDFromPath_WhenGivenStringOfPath() {
         String path = "localhost:4000/users/3";
         int ID = HttpUtils.getIdFromPath(path);
         Assert.assertEquals(ID, 3);

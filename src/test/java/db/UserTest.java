@@ -6,7 +6,6 @@ public class UserTest {
 
 //    @Test
 //    public void shouldInstantiateAsAdmin_WhenMatchingAdminName() {
-//        User adminUser = new User(Constants.admin_name);
- //       Assert.assertTrue(adminUser.isAdmin());
+
 //    }
 }

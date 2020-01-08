@@ -35,13 +35,12 @@ public class DeleteUserHandlerTest {
 
     @Test
     public void shouldDeleteFromDB_WhenGivenID() {
-        String usersRequestPath = "http://localhost:4000/users/2";
         RequestSpecification request = RestAssured.given();
         request.body("Barry");
         request.post(testing.usersPath);
-        request.delete(usersRequestPath);
+        request.delete(testing.usersPath+"/2");
 
-        request.get(usersRequestPath)
+        request.get(testing.usersPath+"/2")
                 .then()
                 .body(equalTo(testing.outputMessages.getString("error_getting_user")));
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handlers.PostUserHandlerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-08T22:41:17" hostname="C02Y30BAJG5J" time="1.025">
+<testsuite name="handlers.PostUserHandlerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-08T23:29:05" hostname="C02Y30BAJG5J" time="1.034">
   <properties/>
-  <testcase name="postEndpointAddsToData" classname="handlers.PostUserHandlerTest" time="1.025"/>
+  <testcase name="postEndpointAddsToData" classname="handlers.PostUserHandlerTest" time="1.034"/>
   <system-out><![CDATA[Server Created
 Put handler method
 ]]></system-out>
