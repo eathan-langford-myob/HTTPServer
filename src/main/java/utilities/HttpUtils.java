@@ -8,15 +8,15 @@ import java.io.OutputStream;
 import java.util.Scanner;
 
 public class HttpUtils {
-    public static void writeResponse(HttpExchange exchange, String response) throws IOException {
-        exchange.sendResponseHeaders(200, response.length());
+    public static void writeResponse(HttpExchange exchange, String response, int statusCode) throws IOException {
+        exchange.sendResponseHeaders(statusCode, response.length());
         OutputStream os = exchange.getResponseBody();
         os.write(response.getBytes());
         os.close();
     }
 
     public static Integer getIdFromPath(String path) {
-        return Integer.parseInt(path.split(Constants.users_endpoint)[1].replace("/", ""));
+        return Integer.parseInt(path.split(System.getenv("USER_ENDPOINT"))[1].replace("/", ""));
     }
 
     public static String getRequestFromBody(InputStream requestBody) {

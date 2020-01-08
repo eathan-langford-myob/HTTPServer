@@ -5,22 +5,24 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import db.User;
 import db.UserDB;
-import utilities.Constants;
-import utilities.HttpRequestValidator;
+import utilities.DBValidator;
 import utilities.HttpUtils;
+import utilities.StatusCodes;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 public class PutUserHandler implements HttpHandler {
     private UserDB DB;
+    private ResourceBundle outputMessages;
 
-    public PutUserHandler(UserDB database) {
+    public PutUserHandler(UserDB database, ResourceBundle outputMessages) {
         this.DB = database;
+        this.outputMessages = outputMessages;
     }
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        System.out.println("GetUser handler method");
         Headers responseHeaders = exchange.getResponseHeaders();
         responseHeaders.set("Content-Type", "text/html");
         String path = exchange.getRequestURI().getPath();
@@ -28,15 +30,15 @@ public class PutUserHandler implements HttpHandler {
     }
 
     private void calculatePutResponse(HttpExchange exchange, String path) throws IOException {
-        if (HttpRequestValidator.isValidUserRequest(path, DB)) {
+        if (DBValidator.isValidUserRequest(path, DB)) {
             Integer query = HttpUtils.getIdFromPath(path);
             User queryUser = DB.getUserByID(query);
             String newUserName = HttpUtils.getRequestFromBody(exchange.getRequestBody()).replace(" ","").split(",")[1];
             queryUser.setName(newUserName.toLowerCase());
 
-            HttpUtils.writeResponse(exchange, Constants.success_put_user);
+            HttpUtils.writeResponse(exchange, outputMessages.getString("success_put_user"), StatusCodes.OK.getCode());
         } else {
-            HttpUtils.writeResponse(exchange, Constants.error_put_user);
+            HttpUtils.writeResponse(exchange, outputMessages.getString("error_put_user"), StatusCodes.BAD_REQUEST.getCode());
         }
     }
 }

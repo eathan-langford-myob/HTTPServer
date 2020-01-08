@@ -1,7 +1,5 @@
 package db;
 
-import utilities.Constants;
-
 import java.util.Objects;
 
 public class User {
@@ -14,7 +12,7 @@ public class User {
     }
 
     public User(String name) {
-        this(name, (name.equals(Constants.admin_name)));
+        this(name, false);
     }
 
     public String getName() {

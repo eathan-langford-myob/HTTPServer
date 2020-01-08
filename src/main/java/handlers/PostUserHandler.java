@@ -5,22 +5,24 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import db.User;
 import db.UserDB;
-import utilities.Constants;
 import utilities.HttpRequestValidator;
 import utilities.HttpUtils;
+import utilities.StatusCodes;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 public class PostUserHandler implements HttpHandler {
     private UserDB DB;
+    private ResourceBundle outputMessages;
 
-    public PostUserHandler(UserDB database) {
+    public PostUserHandler(UserDB database, ResourceBundle outputMessages) {
         this.DB = database;
+        this.outputMessages = outputMessages;
     }
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        System.out.println("Put handler method");
         Headers responseHeaders = exchange.getResponseHeaders();
         responseHeaders.set("Content-Type", "text/html");
         String path = exchange.getRequestURI().getPath();
@@ -35,10 +37,10 @@ public class PostUserHandler implements HttpHandler {
         if (!queryID.isEmpty() && HttpRequestValidator.isAllUsersEndpoint(path)) {
             User newUser = new User(queryID.toLowerCase());
             DB.addUser(newUser);
-            HttpUtils.writeResponse(exchange, Constants.success_post_user);
+            HttpUtils.writeResponse(exchange, outputMessages.getString("success_post_user"), StatusCodes.OK.getCode());
         }
         else {
-            HttpUtils.writeResponse(exchange, Constants.error_post_user);
+            HttpUtils.writeResponse(exchange, outputMessages.getString("error_post_user"), StatusCodes.BAD_REQUEST.getCode());
         }
     }
 }

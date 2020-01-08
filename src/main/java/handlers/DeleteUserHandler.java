@@ -4,22 +4,24 @@ import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import db.UserDB;
-import utilities.Constants;
-import utilities.HttpRequestValidator;
+import utilities.DBValidator;
 import utilities.HttpUtils;
+import utilities.StatusCodes;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 public class DeleteUserHandler implements HttpHandler {
-    UserDB DB;
+    private UserDB DB;
+    private ResourceBundle outputMessages;
 
-    public DeleteUserHandler(UserDB database) {
+    public DeleteUserHandler(UserDB database, ResourceBundle outputMessages) {
         this.DB = database;
+        this.outputMessages = outputMessages;
     }
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        System.out.println("Put handler method");
         Headers responseHeaders = exchange.getResponseHeaders();
         responseHeaders.set("Content-Type", "text/html");
         String path = exchange.getRequestURI().getPath();
@@ -27,12 +29,12 @@ public class DeleteUserHandler implements HttpHandler {
     }
 
     public void calculatePostResponse(HttpExchange exchange, String path) throws IOException {
-        if (HttpRequestValidator.isValidUserRequest(path, DB)) {
-                long ID = HttpUtils.getIdFromPath(path);
-                DB.deleteUserByID(ID);
-                HttpUtils.writeResponse(exchange, Constants.success_delete_user);
+        if (DBValidator.isValidUserRequest(path, DB)) {
+            long ID = HttpUtils.getIdFromPath(path);
+            DB.deleteUserByID(ID);
+            HttpUtils.writeResponse(exchange, outputMessages.getString("success_delete_user"), StatusCodes.OK.getCode());
         } else {
-            HttpUtils.writeResponse(exchange, Constants.error_delete_user);
+            HttpUtils.writeResponse(exchange, outputMessages.getString("error_delete_user"), StatusCodes.BAD_REQUEST.getCode());
         }
     }
 }
