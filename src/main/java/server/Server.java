@@ -15,7 +15,7 @@ public class Server {
     private final String users_endpoint = "/users";
     private final int port = 4000;
     private UserDB DB;
-    Locale locale = new Locale("en", "US");
+    Locale locale = new Locale("en", "AU");
     private ResourceBundle outputMessages;
 
     public Server(UserDB DB){

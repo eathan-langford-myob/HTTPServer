@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handlers.GreetingHandlerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-06T02:07:34" hostname="C02Y30BAJG5J" time="3.08">
+<testsuite name="handlers.GreetingHandlerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-08T22:41:14" hostname="C02Y30BAJG5J" time="3.099">
   <properties/>
-  <testcase name="shouldDisplayAdminInGreeting_WhenHittingRootEndpoint" classname="handlers.GreetingHandlerTest" time="1.035"/>
-  <testcase name="shouldDisplayGreeting_WhenHittingRootEndpoint" classname="handlers.GreetingHandlerTest" time="1.017"/>
-  <testcase name="shouldDisplayAllUsersInGreeting_WhenDBHasMoreUsers" classname="handlers.GreetingHandlerTest" time="1.028"/>
-  <system-out><![CDATA[Database created
-Server created.
-Root endpoint created
-User endpoint created.
-Server created.
-Database created
-Server created.
-Root endpoint created
-User endpoint created.
-Server created.
-Database created
-Server created.
-Root endpoint created
-User endpoint created.
-Server created.
-Users Controller handle method
-Request handler method
-Request method call
+  <testcase name="shouldDisplayAdminInGreeting_WhenHittingRootEndpoint" classname="handlers.GreetingHandlerTest" time="1.041"/>
+  <testcase name="shouldDisplayGreeting_WhenHittingRootEndpoint" classname="handlers.GreetingHandlerTest" time="1.022"/>
+  <testcase name="shouldDisplayAllUsersInGreeting_WhenDBHasMoreUsers" classname="handlers.GreetingHandlerTest" time="1.034"/>
+  <system-out><![CDATA[Server Created
+Server Created
+Server Created
 Put handler method
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

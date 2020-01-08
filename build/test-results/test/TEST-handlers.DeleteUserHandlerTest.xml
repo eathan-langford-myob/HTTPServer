@@ -1,47 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handlers.DeleteUserHandlerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-06T02:07:25" hostname="C02Y30BAJG5J" time="4.093">
+<testsuite name="handlers.DeleteUserHandlerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-08T22:41:05" hostname="C02Y30BAJG5J" time="4.253">
   <properties/>
-  <testcase name="shouldDeleteFromDB_WhenGivenID" classname="handlers.DeleteUserHandlerTest" time="2.013"/>
-  <testcase name="shouldDisplayError_WhenGivenWrongID" classname="handlers.DeleteUserHandlerTest" time="1.034"/>
-  <testcase name="shouldDisplaySuccessMessage_WhenDeletingWithID" classname="handlers.DeleteUserHandlerTest" time="1.045"/>
-  <system-out><![CDATA[Database created
-Server created.
-Root endpoint created
-User endpoint created.
-Server created.
-Users Controller handle method
-Request handler method
-Request method call
+  <testcase name="shouldDeleteFromDB_WhenGivenID" classname="handlers.DeleteUserHandlerTest" time="2.182"/>
+  <testcase name="shouldDisplayError_WhenGivenWrongID" classname="handlers.DeleteUserHandlerTest" time="1.03"/>
+  <testcase name="shouldDisplaySuccessMessage_WhenDeletingWithID" classname="handlers.DeleteUserHandlerTest" time="1.04"/>
+  <system-out><![CDATA[Server Created
 Put handler method
-Users Controller handle method
-Request handler method
-Request method call
-Put handler method
-Users Controller handle method
-Request handler method
-Request method call
-GetUser handler method
-Database created
-Server created.
-Root endpoint created
-User endpoint created.
-Server created.
-Users Controller handle method
-Request handler method
-Request method call
-Put handler method
-Database created
-Server created.
-Root endpoint created
-User endpoint created.
-Server created.
-Users Controller handle method
-Request handler method
-Request method call
-Put handler method
-Users Controller handle method
-Request handler method
-Request method call
+Server Created
+Server Created
 Put handler method
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

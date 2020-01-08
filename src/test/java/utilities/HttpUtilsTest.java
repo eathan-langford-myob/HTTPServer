@@ -1,29 +1,14 @@
+
 package utilities;
 
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import server.Server;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 
 public class HttpUtilsTest {
-    private Server server;
-
-    @Before
-    public void setUp() throws Exception {
-        server = new Server();
-        server.createServerConnection();
-    }
-
-    @After
-    public void tearDown() {
-        server.closeServerConnection();
-    }
-
 
     @Test
     public void shouldExtractIDFromPath_WhenGivenStringOfPathh() {

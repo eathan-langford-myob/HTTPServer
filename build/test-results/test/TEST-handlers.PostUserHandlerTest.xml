@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handlers.PostUserHandlerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-06T02:07:37" hostname="C02Y30BAJG5J" time="1.031">
+<testsuite name="handlers.PostUserHandlerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-08T22:41:17" hostname="C02Y30BAJG5J" time="1.025">
   <properties/>
-  <testcase name="postEndpointAddsToData" classname="handlers.PostUserHandlerTest" time="1.031"/>
-  <system-out><![CDATA[Database created
-Server created.
-Root endpoint created
-User endpoint created.
-Server created.
-Users Controller handle method
-Request handler method
-Request method call
+  <testcase name="postEndpointAddsToData" classname="handlers.PostUserHandlerTest" time="1.025"/>
+  <system-out><![CDATA[Server Created
 Put handler method
-Users Controller handle method
-Request handler method
-Request method call
-GetUser handler method
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

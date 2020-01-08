@@ -41,10 +41,10 @@ public class UsersController implements HttpHandler {
             case (postRequest):
                 requestMethodCall(postHandler, exchange);
                 break;
-            case (deleteRequest):
+            case (updateRequest):
                 requestMethodCall(putHandler, exchange);
                 break;
-            case (updateRequest):
+            case (deleteRequest):
                 requestMethodCall(deleteHandler, exchange);
                 break;
             default:

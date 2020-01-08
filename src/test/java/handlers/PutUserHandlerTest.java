@@ -1,3 +1,4 @@
+
 package handlers;
 
 import io.restassured.RestAssured;
@@ -5,24 +6,24 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import server.Server;
-import utilities.Constants;
 
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.CoreMatchers.containsString;
 
 public class PutUserHandlerTest {
-    private Server server;
+    private TestSetup testing = new TestSetup();
+
+
     @Before
     public void setUp() throws Exception {
-        server = new Server();
-        server.createServerConnection();
+        testing.setup();
     }
 
     @After
     public void tearDown() {
-        server.closeServerConnection();
+        testing.tearDown();
     }
+
 
 
 
@@ -30,13 +31,13 @@ public class PutUserHandlerTest {
     public void putEndpointUpdatesUserName() {
         RequestSpecification request = RestAssured.given();
         request.body("Barry");
-        request.post(Constants.local_address+Constants.port+Constants.users_endpoint);
+        request.post(testing.usersPath);
 
         request.body("Barry, Larry");
-        request.put(Constants.local_address+Constants.port+Constants.users_endpoint+"/2");
+        request.put(testing.usersPath +"/2");
 
         when().
-                get(Constants.local_address+Constants.port+Constants.users_endpoint).
+                get(testing.usersPath).
                 then().
                 statusCode(200).
                 body(containsString("larry"));
@@ -48,9 +49,9 @@ public class PutUserHandlerTest {
         request.body("Barry, Larry");
 
         when().
-                put(Constants.local_address+Constants.port+Constants.users_endpoint+"/2").
+                put(testing.usersPath +"/2").
                 then().
-                statusCode(200).
-                body(containsString(Constants.error_put_user));
+                statusCode(400).
+                body(containsString(testing.outputMessages.getString("error_put_user")));
     }
 }
