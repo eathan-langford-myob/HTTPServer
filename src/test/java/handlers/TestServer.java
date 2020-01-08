@@ -7,7 +7,7 @@ import server.Server;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class TestSetup {
+public class TestServer {
     public Server server;
     public User admin = new User("Eathan");
     public UserDB DB = new UserDB();

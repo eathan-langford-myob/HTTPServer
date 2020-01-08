@@ -9,7 +9,7 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class DeleteUserHandlerTest {
-    private TestSetup testing = new TestSetup();
+    private TestServer testing = new TestServer();
 
 
     @Before

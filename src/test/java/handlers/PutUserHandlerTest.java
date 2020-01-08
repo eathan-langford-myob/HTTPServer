@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.when;
 import static org.hamcrest.CoreMatchers.containsString;
 
 public class PutUserHandlerTest {
-    private TestSetup testing = new TestSetup();
+    private TestServer testing = new TestServer();
 
 
     @Before

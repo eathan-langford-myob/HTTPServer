@@ -10,7 +10,7 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class GetUserHandlerTest {
-    private TestSetup testing = new TestSetup();
+    private TestServer testing = new TestServer();
 
 
     @Before
