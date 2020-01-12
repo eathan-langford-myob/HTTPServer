@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="handlers.GetUserTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-12T22:21:06" hostname="C02Y30BAJG5J" time="3.107">
+  <properties/>
+  <testcase name="shouldReturnAllUsers_WhenHittingUsersEndpoint" classname="handlers.GetUserTest" time="1.046"/>
+  <testcase name="shouldReturnErrorBody_WhenGivenWrongID" classname="handlers.GetUserTest" time="1.027"/>
+  <testcase name="shouldGetUser_WhenGivenID" classname="handlers.GetUserTest" time="1.034"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

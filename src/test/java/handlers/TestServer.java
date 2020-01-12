@@ -11,8 +11,8 @@ public class TestServer {
     public Server server;
     public User admin = new User("Eathan");
     public UserDB DB = new UserDB();
-    public String localPath = "http://localhost:4000/";
-    public String usersPath = "http://localhost:4000/users";
+    public String localPath = "http://localhost:8080/";
+    public String usersPath = "http://localhost:8080/users";
     public ResourceBundle outputMessages = ResourceBundle.getBundle("OutputMessages", new Locale("en", "US"));
 
     public void setup() throws Exception {

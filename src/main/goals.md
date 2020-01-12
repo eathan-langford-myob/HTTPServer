@@ -41,3 +41,95 @@ _REMOVING SELF_ : add check to start of DELETE method that doesnt allow deletion
 * just interact using curl or postman or your http tool of choice to send http requests to modify the state of the resource.
 
 _Automated tests: you need to have appropriate tests for all important logic!_
+
+*		
+		client
+		   |
+		   v
+--------------------------
+		Integration - extract all info from HTTP and pass down to appropriate domain
+--------------------------
+		DOMAIN - do domain stuff without knowing about Http
+--------------------------
+	  PERSISTENCE - do database stuff
+--------------------------
+*/
+/*
+ * RESTful stuff
+ * GET /users   (get all users)
+ * GET /users/id (get this specific user)
+ * POST /users    (create new users resource)
+ * PUT /users/id  (replace user with `id` with value in body (idempotent update))
+ * DELETE /users/id  (delete that user at `id`)
+ */
+class Server {
+	//setup http server, port etc
+	//init controllers
+}
+/**
+	This guy handles all HTTP things.
+	Decides which part of the domain to call.
+	Extracts info from HTTP and passes it down to Domain. (Extract path ids, body etc)
+	Turns the domains response into a HTTP response.
+*/
+class UserController implements Handler {
+	private GetAllUsers getAllUsers;
+	...
+	// or just single class that deals with domain
+	public UserController() {
+		getAllUsers = ...;
+	}
+	/**
+	 * entry point to handle request.
+	 * determine which path this is - ie all users or user by id
+	 */
+	@Override
+	public void handle(HttpContext ctx) {
+		String path = ctx.getPath();
+		if (path.matches("^/users$")) {
+			handleAllUsers(ctx);
+		} else if (path.matches("^/users/[0-9]+$")){
+			handleUserById(ctx)// or getpath, get method
+		}
+	}
+	// determine METHOD and call appropriate domain
+	private void handleAllUsers(ctx) {
+		String method = ctx.getMethod();
+		switch(method) {
+			case "GET":	extractInfoAndGetAllUsers(ctx); break;
+			case "POST": extractInfoAndCreateUser(ctx) break;
+			default: 405
+		}
+	}
+	// determine METHOD and call appropriate domain
+	private void handleUserById(ctx) {
+		String method = ctx.getMethod();
+		switch(method) {
+			case "GET":	extractInfoAndGetUserById(ctx); break;
+			case "DELETE": extractInfoAndDeleteUserById(ctx) break;
+			case "PUT" ...
+			default: 405
+		}
+	}
+	private void extractInfoAndGetUserById(ctx) {
+		String id = //extract out of the path;
+		String user = getUserById.execute(id);
+		sendSuccessfulResponse(ctx, body);
+		//send response
+	}
+	private void extractInfoAndGetUserById(ctx) {
+		String id = //extract out of the path;
+		String user = getUserById.execute(id);
+		sendSuccessfulResponse(ctx, body);
+		//send response
+	}
+	private sendSuccessfulResponse(exch, body) {
+		exh.setStatus(200);
+	}
+}
+public class GetGreetingCommand {
+	public void execute() {
+		User[] usrs = db.getAllUsers();
+		usrs.stream().collect(Joiners(","))
+		return 
+	}

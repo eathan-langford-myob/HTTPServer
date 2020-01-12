@@ -3,16 +3,16 @@ package utilities;
 public class HttpRequestValidator {
 
     public static boolean isValidIdRequest(String urlRequest) {
-        String[] requestBreakdown = urlRequest.split(System.getenv("USER_ENDPOINT"));
+        String[] requestBreakdown = urlRequest.split("/users");
         boolean doesEndWithID = requestBreakdown[1].replaceAll("/", "").chars().allMatch(Character::isDigit);
-        return urlRequest.startsWith(System.getenv("USER_ENDPOINT")) && doesEndWithID;
+        return urlRequest.startsWith("/users") && doesEndWithID;
     }
 
     public static boolean isAllUsersEndpoint(String path) {
-        return path.endsWith(System.getenv("USER_ENDPOINT")) || path.equalsIgnoreCase(System.getenv("USER_ENDPOINT") + "/");
+        return path.endsWith("/users") || path.equalsIgnoreCase("/users" + "/");
     }
 
-    public static boolean isIdEndpoint(String path, String endpoint) {
-        return path.startsWith(endpoint) && isValidIdRequest(path);
+    public static boolean isValidUpdateRequest(String urlRequest) {
+        return urlRequest.contains(",") && urlRequest.split(",").length==2;
     }
 }
