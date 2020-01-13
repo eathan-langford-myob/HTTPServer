@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="domain.UserServiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-01-13T10:56:49" hostname="C02Y30BAJG5J" time="7.136">
+<testsuite name="domain.UserServiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-01-13T13:28:21" hostname="C02Y30BAJG5J" time="7.138">
   <properties/>
-  <testcase name="shouldReturnTrueForUpdateRequestContainingOriginalName_WhenUpdatingUserNameWithUserService" classname="domain.UserServiceTest" time="1.035"/>
-  <testcase name="shouldReturnTrue_WhenUserExistsInDB" classname="domain.UserServiceTest" time="1.018"/>
-  <testcase name="shouldCreateUser_WhenCallingUserServiceCreate" classname="domain.UserServiceTest" time="1.014"/>
-  <testcase name="shouldGetUserByID_WhenCallingUserServiceReadUser" classname="domain.UserServiceTest" time="1.02"/>
-  <testcase name="shouldUpdateUserName_WhenCallingUserServiceUpdate" classname="domain.UserServiceTest" time="1.016"/>
-  <testcase name="shouldRemoveUser_WhenUsingIDWithUserService" classname="domain.UserServiceTest" time="1.017"/>
+  <testcase name="shouldReturnTrueForUpdateRequestContainingOriginalName_WhenUpdatingUserNameWithUserService" classname="domain.UserServiceTest" time="1.04"/>
+  <testcase name="shouldReturnTrue_WhenUserExistsInDB" classname="domain.UserServiceTest" time="1.02"/>
+  <testcase name="shouldCreateUser_WhenCallingUserServiceCreate" classname="domain.UserServiceTest" time="1.022"/>
+  <testcase name="shouldGetUserByID_WhenCallingUserServiceReadUser" classname="domain.UserServiceTest" time="1.012"/>
+  <testcase name="shouldUpdateUserName_WhenCallingUserServiceUpdate" classname="domain.UserServiceTest" time="1.015"/>
+  <testcase name="shouldRemoveUser_WhenUsingIDWithUserService" classname="domain.UserServiceTest" time="1.013"/>
   <testcase name="shouldDisplayAllUsers_WhenCallingUserServiceRead" classname="domain.UserServiceTest" time="1.013"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
