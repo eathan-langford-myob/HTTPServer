@@ -3,7 +3,7 @@ package server;
 import com.sun.net.httpserver.HttpServer;
 import controllers.UsersController;
 import db.UserDB;
-import handlers.GreetingHandler;
+import controllers.GreetingController;
 
 import java.net.InetSocketAddress;
 import java.util.Locale;
@@ -26,9 +26,9 @@ public class Server {
 
 
     public void createServerConnection() throws Exception {
-        server = HttpServer.create(new InetSocketAddress(Integer.parseInt(System.getenv("PORT"))), 0);
+        server = HttpServer.create(new InetSocketAddress(8080), 0);
 
-        server.createContext(root_address, new GreetingHandler(DB, outputMessages));
+        server.createContext(root_address, new GreetingController(DB, outputMessages));
 
         server.createContext(users_endpoint, new UsersController(DB, outputMessages));
 

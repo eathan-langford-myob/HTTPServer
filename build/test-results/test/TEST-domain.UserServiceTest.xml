@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="domain.UserServiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-01-12T22:20:54" hostname="C02Y30BAJG5J" time="7.148">
+  <properties/>
+  <testcase name="shouldReturnTrueForUpdateRequestContainingOriginalName_WhenUpdatingUserNameWithUserService" classname="domain.UserServiceTest" time="1.048"/>
+  <testcase name="shouldReturnTrue_WhenUserExistsInDB" classname="domain.UserServiceTest" time="1.017"/>
+  <testcase name="shouldCreateUser_WhenCallingUserServiceCreate" classname="domain.UserServiceTest" time="1.022"/>
+  <testcase name="shouldGetUserByID_WhenCallingUserServiceReadUser" classname="domain.UserServiceTest" time="1.011"/>
+  <testcase name="shouldUpdateUserName_WhenCallingUserServiceUpdate" classname="domain.UserServiceTest" time="1.012"/>
+  <testcase name="shouldRemoveUser_WhenUsingIDWithUserService" classname="domain.UserServiceTest" time="1.019"/>
+  <testcase name="shouldDisplayAllUsers_WhenCallingUserServiceRead" classname="domain.UserServiceTest" time="1.017"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

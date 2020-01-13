@@ -18,11 +18,4 @@ public class DBValidator {
         return false;
     }
 
-    public static boolean isValidUserRequest(String path, UserDB DB) {
-        return HttpRequestValidator.isValidIdRequest(path) && isUserInDatabase(DB, HttpUtils.getIdFromPath(path)) && !isAdmin(path, DB);
-    }
-
-    public static boolean isAdmin(String path, UserDB DB) {
-        return DB.getUserByID(HttpUtils.getIdFromPath(path)).isAdmin();
-    }
 }
