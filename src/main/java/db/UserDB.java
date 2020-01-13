@@ -45,15 +45,4 @@ public class UserDB implements DB {
     public void deleteUserByID(long ID) {
         users.remove(ID);
     }
-
-    @Override
-    public long getUserID(String name) {
-        return users.entrySet().stream().filter(entry -> entry.getValue().getName().equalsIgnoreCase(name)).findFirst().get().getKey();
-    }
-
-    @Override
-    public void updateUserName(String queryName, String replacementName) {
-        long ID = getUserID(queryName);
-        users.get(ID).setName(replacementName);
-    }
 }
