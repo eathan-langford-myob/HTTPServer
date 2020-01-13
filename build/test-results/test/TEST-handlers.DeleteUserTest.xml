@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handlers.DeleteUserTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-12T22:21:13" hostname="C02Y30BAJG5J" time="3.13">
+<testsuite name="handlers.DeleteUserTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-13T10:57:08" hostname="C02Y30BAJG5J" time="3.108">
   <properties/>
-  <testcase name="shouldDeleteFromDB_WhenGivenID" classname="handlers.DeleteUserTest" time="1.065"/>
-  <testcase name="shouldDisplayError_WhenGivenWrongID" classname="handlers.DeleteUserTest" time="1.033"/>
-  <testcase name="shouldDisplaySuccessMessage_WhenDeletingWithID" classname="handlers.DeleteUserTest" time="1.031"/>
+  <testcase name="shouldDeleteFromDB_WhenGivenID" classname="handlers.DeleteUserTest" time="1.045"/>
+  <testcase name="shouldDisplayError_WhenGivenWrongID" classname="handlers.DeleteUserTest" time="1.025"/>
+  <testcase name="shouldDisplaySuccessMessage_WhenDeletingWithID" classname="handlers.DeleteUserTest" time="1.036"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

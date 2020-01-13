@@ -66,7 +66,10 @@ public class UsersController implements HttpHandler {
     private void updateUserHandler(HttpExchange exchange) throws IOException {
         extractNameFromBody(exchange.getRequestBody());
         extractIDFromPath();
-        if (!nameFromRequest.isEmpty() && HttpRequestValidator.isValidUpdateRequest(nameFromRequest) && userService.isSameName(IDFromPath, nameFromRequest)) {
+        if (!nameFromRequest.isEmpty()
+                && HttpRequestValidator.isValidUpdateRequest(nameFromRequest)
+                && userService.isSameName(IDFromPath, nameFromRequest)
+                && !userService.isUserAdmin(IDFromPath)) {
             String newName = nameFromRequest.split(",")[1].trim();
             userService.updateUserNameByID(IDFromPath, newName);
             writeSuccessfulResponse(exchange, outputMessages.getString("success_put_user"));
@@ -92,10 +95,6 @@ public class UsersController implements HttpHandler {
     private void extractNameFromBody(InputStream requestBody) {
         nameFromRequest = HttpUtils.getRequestFromBody(requestBody);
     }
-
-//    private String[] extractNameAndReplacementNameFromBody(InputStream requestBody) {
-//        return HttpUtils.getRequestFromBody(requestBody).replace(" ", "").split(",");
-//    }
 
     private User getValidSingleUserByID() {
         return userService.ReadByID(IDFromPath);

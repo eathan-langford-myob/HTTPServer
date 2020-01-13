@@ -42,6 +42,19 @@ public class PutUserTest {
                 statusCode(200).
                 body(containsString("Larry"));
     }
+    @Test
+    public void shouldFailTest_WhenTryingToUpdateAdminUser() {
+        RequestSpecification request = RestAssured.given();
+
+        request.body("Eathan, Larry");
+        request.put(testing.usersPath +"/1");
+
+        when().
+                get(testing.usersPath).
+                then().
+                statusCode(200).
+                body(containsString("Larry"));
+    }
 
     @Test
     public void putEndpointShouldFailWithWrongID() {

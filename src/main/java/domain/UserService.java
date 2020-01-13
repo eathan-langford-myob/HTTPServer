@@ -37,6 +37,10 @@ this.database = database;
         queryUser.setName(nameFromRequest);
     }
 
+    public boolean isUserAdmin(int ID) {
+        return database.getUserByID(ID).isAdmin();
+    }
+
     public boolean isSameName(int queryID, String namesFromRequest) {
         String[] nameBreakdown = namesFromRequest.split(",");
         return ReadByID(queryID).getName().equalsIgnoreCase(nameBreakdown[0]);
