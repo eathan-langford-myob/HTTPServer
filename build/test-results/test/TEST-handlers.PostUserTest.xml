@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handlers.PostUserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-13T10:57:01" hostname="C02Y30BAJG5J" time="1.043">
+<testsuite name="handlers.PostUserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-13T13:28:32" hostname="C02Y30BAJG5J" time="1.03">
   <properties/>
-  <testcase name="postEndpointAddsToData" classname="handlers.PostUserTest" time="1.043"/>
+  <testcase name="postEndpointAddsToData" classname="handlers.PostUserTest" time="1.03"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

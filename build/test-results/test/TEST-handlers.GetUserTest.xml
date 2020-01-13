@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handlers.GetUserTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-13T10:57:02" hostname="C02Y30BAJG5J" time="3.1">
+<testsuite name="handlers.GetUserTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-13T13:28:33" hostname="C02Y30BAJG5J" time="3.084">
   <properties/>
-  <testcase name="shouldReturnAllUsers_WhenHittingUsersEndpoint" classname="handlers.GetUserTest" time="1.037"/>
-  <testcase name="shouldReturnErrorBody_WhenGivenWrongID" classname="handlers.GetUserTest" time="1.026"/>
-  <testcase name="shouldGetUser_WhenGivenID" classname="handlers.GetUserTest" time="1.035"/>
+  <testcase name="shouldReturnAllUsers_WhenHittingUsersEndpoint" classname="handlers.GetUserTest" time="1.036"/>
+  <testcase name="shouldReturnErrorBody_WhenGivenWrongID" classname="handlers.GetUserTest" time="1.019"/>
+  <testcase name="shouldGetUser_WhenGivenID" classname="handlers.GetUserTest" time="1.028"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
