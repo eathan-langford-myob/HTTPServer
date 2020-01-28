@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handlers.GreetingTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-13T13:28:36" hostname="C02Y30BAJG5J" time="3.096">
+<testsuite name="handlers.GreetingTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-22T00:11:19" hostname="C02Y30BAJG5J" time="3.088">
   <properties/>
-  <testcase name="shouldDisplayAdminInGreeting_WhenHittingRootEndpoint" classname="handlers.GreetingTest" time="1.038"/>
+  <testcase name="shouldDisplayAdminInGreeting_WhenHittingRootEndpoint" classname="handlers.GreetingTest" time="1.033"/>
   <testcase name="shouldDisplayGreeting_WhenHittingRootEndpoint" classname="handlers.GreetingTest" time="1.019"/>
-  <testcase name="shouldDisplayAllUsersInGreeting_WhenDBHasMoreUsers" classname="handlers.GreetingTest" time="1.038"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="shouldDisplayAllUsersInGreeting_WhenDBHasMoreUsers" classname="handlers.GreetingTest" time="1.036"/>
+  <system-out><![CDATA[com.sun.net.httpserver.Headers@8283aa9
+com.sun.net.httpserver.Headers@8283aa9
+com.sun.net.httpserver.Headers@8283aa9
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

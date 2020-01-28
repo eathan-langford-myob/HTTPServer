@@ -22,7 +22,6 @@ public class Server {
 
     public Server(UserDB DB){
         this.DB = DB;
-
         outputMessages = ResourceBundle.getBundle("OutputMessages", locale);
     }
 

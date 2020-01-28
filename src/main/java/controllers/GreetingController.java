@@ -32,8 +32,10 @@ public class GreetingController implements HttpHandler {
     public void handle(HttpExchange exchange) throws IOException {
         Headers responseHeaders = exchange.getResponseHeaders();
         responseHeaders.set("Content-Type", "text/plain");
+        System.out.println(exchange.getResponseHeaders());
         String users = collectNames();
-        String response = outputMessages.getString("hello") + users + outputMessages.getString("time") + new Date().toString();        exchange.sendResponseHeaders(StatusCodes.OK.getCode(), response.length());
+        String response = outputMessages.getString("hello") + users + outputMessages.getString("time") + new Date().toString();
+        exchange.sendResponseHeaders(StatusCodes.OK.getCode(), response.length());
         OutputStream os = exchange.getResponseBody();
         os.write(response.getBytes());
         os.close();
