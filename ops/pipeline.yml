@@ -2,4 +2,4 @@ steps:
   - label: "Testing :hammer:"
     command: scripts/tests.sh
     agents:
-      queue: "queue=fma-dev-dflt"
+      queue: "fma-dev-dflt"
