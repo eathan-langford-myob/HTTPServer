@@ -7,41 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a84f8b9-9706-46af-9b62-0f31a563b92a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/db.UserDBTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/db.UserDBTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/domain.UserServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/domain.UserServiceTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.DeleteUserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.DeleteUserTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.GetUserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.GetUserTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.GreetingTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.GreetingTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.PostUserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.PostUserTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.PutUserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/handlers.PutUserTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/utilities.HttpRequestValidatorTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/utilities.HttpRequestValidatorTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/utilities.HttpUtilsTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/utilities.HttpUtilsTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/utilities.UserStringFormatterTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/utilities.UserStringFormatterTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/db.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/db.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/domain.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/domain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/handlers.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/handlers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/utilities.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/utilities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-db.UserDBTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-db.UserDBTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-domain.UserServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-domain.UserServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.DeleteUserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.DeleteUserTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.GetUserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.GetUserTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.GreetingTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.GreetingTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.PostUserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.PostUserTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.PutUserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-handlers.PutUserTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-utilities.HttpRequestValidatorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-utilities.HttpRequestValidatorTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-utilities.HttpUtilsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-utilities.HttpUtilsTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-utilities.UserStringFormatterTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-utilities.UserStringFormatterTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -140,8 +106,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+            <state relative-caret-position="324">
+              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -520,7 +486,7 @@
       <workItem from="1580264889095" duration="69000" />
       <workItem from="1580268740195" duration="969000" />
       <workItem from="1580270655151" duration="1535000" />
-      <workItem from="1580272812937" duration="289000" />
+      <workItem from="1580272812937" duration="979000" />
     </task>
     <servers />
   </component>
@@ -557,10 +523,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233241000" />
+    <option name="totallyTimeSpent" value="233931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20926517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -572,14 +539,14 @@
       <window_info id="JRebel" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.323185" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.48189133" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.48189133" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32435596" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32897383" />
       <window_info anchor="bottom" id="Regex" order="8" weight="0.32997987" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4024145" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.4024145" />
       <window_info anchor="bottom" id="Docker" order="10" weight="0.3290398" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50061053" side_tool="true" weight="0.46576762" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -1074,8 +1041,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+        <state relative-caret-position="324">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
         </state>
       </provider>
     </entry>
