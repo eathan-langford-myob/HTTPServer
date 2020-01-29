@@ -35,6 +35,7 @@ public class Server {
 
         server.setExecutor(null);
         server.start();
+        System.out.println("Connection Created");
     }
 
     public void closeServerConnection() {

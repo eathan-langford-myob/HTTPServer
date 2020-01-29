@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="handlers.PutUserTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-22T00:11:11" hostname="C02Y30BAJG5J" time="3.97">
+<testsuite name="handlers.PutUserTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-29T04:11:10" hostname="C02Y30BAJG5J" time="4.428">
   <properties/>
-  <testcase name="shouldFailTest_WhenTryingToUpdateAdminUser" classname="handlers.PutUserTest" time="1.882"/>
-  <testcase name="putEndpointShouldFailWithWrongID" classname="handlers.PutUserTest" time="1.034"/>
-  <testcase name="putEndpointUpdatesUserName" classname="handlers.PutUserTest" time="1.054"/>
+  <testcase name="shouldFailTest_WhenTryingToUpdateAdminUser" classname="handlers.PutUserTest" time="2.337"/>
+  <testcase name="putEndpointShouldFailWithWrongID" classname="handlers.PutUserTest" time="1.032"/>
+  <testcase name="putEndpointUpdatesUserName" classname="handlers.PutUserTest" time="1.058"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
