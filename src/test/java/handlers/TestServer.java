@@ -13,7 +13,7 @@ public class TestServer {
     public UserDB DB = new UserDB();
     public String localPath = "http://localhost:8080/";
     public String usersPath = "http://localhost:8080/users";
-    public ResourceBundle outputMessages = ResourceBundle.getBundle("OutputMessages", new Locale("en", "US"));
+    public ResourceBundle outputMessages = ResourceBundle.getBundle("OutputMessages", new Locale("en", "AU"));
 
     public void setup() throws Exception {
         DB = new UserDB();

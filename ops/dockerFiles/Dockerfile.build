@@ -1,0 +1,3 @@
+FROM gradle:latest AS gradleBuild
+COPY . ./
+RUN ["gradle", "build"]

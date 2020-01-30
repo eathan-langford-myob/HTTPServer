@@ -3,7 +3,7 @@ package controllers;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import db.UserDB;
+import domain.UserService;
 import utilities.StatusCodes;
 
 import java.io.IOException;
@@ -15,16 +15,16 @@ import java.util.ResourceBundle;
 import static utilities.UserStringFormatter.formatUsersToString;
 
 public class GreetingController implements HttpHandler {
-    private UserDB DB;
+    private UserService userService;
     private ResourceBundle outputMessages;
 
-    public GreetingController(UserDB database, ResourceBundle outputMessages) {
-        this.DB = database;
+    public GreetingController(UserService userService, ResourceBundle outputMessages) {
+        this.userService = userService;
         this.outputMessages = outputMessages;
     }
 
     private String collectNames() {
-        ArrayList<String> collectionOfNamesFromDB = DB.getAllUsersNames();
+        ArrayList<String> collectionOfNamesFromDB = userService.collectUserNames();
         return formatUsersToString(collectionOfNamesFromDB);
     }
 

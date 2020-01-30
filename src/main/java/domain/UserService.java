@@ -4,6 +4,8 @@ import db.User;
 import db.UserDB;
 import utilities.DBValidator;
 
+import java.util.ArrayList;
+
 public class UserService {
     private UserDB database;
 
@@ -14,6 +16,11 @@ this.database = database;
     public String readAll() {
         return database.getAllDbEntries().toString();
     }
+
+    public ArrayList<String> collectUserNames() {
+        return database.getAllUsersNames();
+    }
+
 
     public void createUser(String nameFromRequest) {
         User newUser = new User(nameFromRequest);

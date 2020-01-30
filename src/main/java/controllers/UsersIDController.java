@@ -3,7 +3,6 @@ package controllers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import db.User;
-import db.UserDB;
 import domain.UserService;
 import utilities.HttpRequestValidator;
 import utilities.HttpUtils;
@@ -18,8 +17,8 @@ public class UsersIDController implements HttpHandler {
     private String requestPath;
     private ResourceBundle outputMessages;
 
-    public UsersIDController(UserDB database, ResourceBundle resourceBundle) {
-        this.userService = new UserService(database);
+    public UsersIDController(UserService userService, ResourceBundle resourceBundle) {
+        this.userService = userService;
         this.outputMessages = resourceBundle;
     }
 

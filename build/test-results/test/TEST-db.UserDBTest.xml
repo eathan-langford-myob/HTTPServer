@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="db.UserDBTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-29T05:22:26" hostname="C02Y30BAJG5J" time="0.0">
+<testsuite name="db.UserDBTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-30T04:59:17" hostname="C02Y30BAJG5J" time="0.001">
   <properties/>
-  <testcase name="shouldAddToDB_WhenAddingUser" classname="db.UserDBTest" time="0.0"/>
+  <testcase name="shouldAddToDB_WhenAddingUser" classname="db.UserDBTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

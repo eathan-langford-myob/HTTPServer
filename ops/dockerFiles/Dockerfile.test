@@ -1,0 +1,4 @@
+FROM gradle:latest AS testing
+COPY . ./
+RUN echo "RUNNING TESTS"
+RUN ["gradle", "check", "--no-daemon", "-i"]

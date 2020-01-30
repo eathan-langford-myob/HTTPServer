@@ -1,5 +1,15 @@
 steps:
-  - label: "Testing :hammer:"
-    command: scripts/tests.sh
+  - label: "Testing! :bread:"
+    command: ./ops/scripts/test
     agents:
       queue: "fma-dev-dflt"
+
+        - wait
+
+  - label: "Building Image :cut_of_meat:"
+    command: ./ops/scripts/build
+    agents:
+      queue: "fma-dev-dflt"
+
+  - label: "Spin up container! :hamburger:"
+    command: ./ops/scripts/

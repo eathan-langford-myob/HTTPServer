@@ -3,7 +3,6 @@ package controllers;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import db.UserDB;
 import domain.UserService;
 import utilities.HttpUtils;
 import utilities.StatusCodes;
@@ -16,8 +15,8 @@ public class UsersController implements HttpHandler {
     private UserService userService;
 
 
-    public UsersController(UserDB database, ResourceBundle outputMessages) {
-        this.userService = new UserService(database);
+    public UsersController(UserService userService, ResourceBundle outputMessages) {
+        this.userService = userService;
         this.outputMessages = outputMessages;
     }
 
