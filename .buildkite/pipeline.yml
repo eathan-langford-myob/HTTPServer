@@ -10,6 +10,8 @@ steps:
     command: ./ops/scripts/build.sh
     agents:
       queue: "fma-dev-dflt"
+    artifact_paths:
+      - "build/libs/*"
 
   - wait
 
