@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a84f8b9-9706-46af-9b62-0f31a563b92a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.buildkite/pipeline.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.buildkite/pipeline.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ops/dockerFiles/Dockerfile.build" beforeDir="false" afterPath="$PROJECT_DIR$/ops/dockerFiles/Dockerfile.build" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -106,8 +106,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ops/dockerFiles/Dockerfile.build">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            <state relative-caret-position="21">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -564,7 +564,7 @@
       <workItem from="1580264889095" duration="69000" />
       <workItem from="1580268740195" duration="969000" />
       <workItem from="1580270655151" duration="1535000" />
-      <workItem from="1580272812937" duration="21044000" />
+      <workItem from="1580272812937" duration="21202000" />
     </task>
     <servers />
   </component>
@@ -601,13 +601,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253996000" />
+    <option name="totallyTimeSpent" value="254154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20926517" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20926517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -624,7 +624,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32897383" />
       <window_info anchor="bottom" id="Regex" order="8" weight="0.32997987" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.31187123" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.31187123" />
       <window_info anchor="bottom" id="Docker" order="10" weight="0.3290398" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50061053" side_tool="true" weight="0.46576762" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -1133,8 +1133,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ops/dockerFiles/Dockerfile.build">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        <state relative-caret-position="21">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
