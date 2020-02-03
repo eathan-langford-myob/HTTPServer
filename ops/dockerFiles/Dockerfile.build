@@ -1,6 +1,8 @@
 FROM gradle:latest AS build
 COPY . ./
+RUN ["ls", "-a"]
 RUN ["gradle", "build"]
+CMD ["ls", "-a"]
 
 FROM openjdk:14-alpine AS build-docker-image
 COPY --from=build ./build/libs/Hello-World-1.0-SNAPSHOT.jar /usr/app/
