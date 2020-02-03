@@ -6,7 +6,7 @@ steps:
 
   - wait
 
-  - label: "Building Image :cut_of_meat:"
+  - label: "Building Image & Pushing to ECR :cut_of_meat:"
     command: ./ops/scripts/build.sh
     agents:
       queue: "fma-dev-dflt"
