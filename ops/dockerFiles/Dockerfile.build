@@ -1,7 +1,6 @@
 FROM gradle:latest AS build
 WORKDIR /usr/app
 COPY . ./
-RUN ["ls", "-a"]
 RUN ["gradle", "build"]
 
 FROM openjdk:14-alpine AS build-docker-image
