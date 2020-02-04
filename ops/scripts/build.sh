@@ -11,7 +11,7 @@ echo "---------------------BUILDING IMAGE---------------------"
 docker build -t "${ECR_Name}" . -f "${Dockerfile}"
 
 echo "---------------------TAGGING IMAGE---------------------"
-docker tag "${ECR}:${tag}" "${ECR_Name}"
+docker tag "${ECR_Name}:${tag}" "${ECR}"
 
 echo "---------------------PUSHING IMAGE---------------------"
 docker push "${ECR}:${tag}"
