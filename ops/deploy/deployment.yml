@@ -1,0 +1,114 @@
+# Basic application with templating
+---
+kind: "Template"
+apiVersion: "v1"
+metadata:
+  name: "eathan-hello-world"
+  annotations:
+    description: "Eathans HelloWorld application"
+objects:
+
+  - kind: Deployment
+    apiVersion: apps/v1
+    metadata:
+      name: $(name)
+      namespace: $(namespace)
+      labels:
+        app: $(name)
+        repo: $(repo)
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: $(name)
+      template:
+        metadata:
+          labels:
+            app: $(name)
+            repo: $(repo)
+        spec:
+          containers:
+            - name: nginx
+              image: $(image):$(imageTag)
+              ports:
+                - containerPort: $((containerPort))
+
+  - kind: Ingress
+    apiVersion: v1
+    metadata:
+      name: $(name)
+      namespace: $(namespace)
+      labels:
+        app: $(name)
+        repo: $(repo)
+      annotations:
+        kubernetes.io/tls-acme: "true"
+    spec:
+      tls:
+        - hosts:
+            - $(host)
+          secretName: $(name)-tls
+      rules:
+        - host: $(host)
+          http:
+            paths:
+              - path: /
+                backend:
+                  serviceName: $(name)
+                  servicePort: 80
+
+  - kind: Service
+    apiVersion: v1
+    metadata:
+      name: $(name)
+      namespace: $(namespace)
+      labels:
+        app: $(name)
+        repo: $(repo)
+      annotations:
+        prometheus.io/scrape: "true"
+    spec:
+      ports:
+        - port: 80
+          targetPort: $((containerPort))
+      selector:
+        app: $(name)
+        repo: $(repo)
+
+parameters:
+  - name: "name"
+    description: "application name"
+    required: true
+    parameterType: string
+  - name: "namespace"
+    description: "kube namespace"
+    required: true
+    parameterType: string
+  - name: "repo"
+    description: "source code repository (eg jupiter-docs)"
+    required: true
+    parameterType: string
+  - name: "routing-key"
+    description: "victor ops routing key"
+    required: true
+    parameterType: string
+  - name: "myob-product"
+    description: "the customer facing or internal product (eg essentials)"
+    required: true
+    parameterType: string
+  - name: "containerPort"
+    description: "Kube demo port"
+    required: true
+    parameterType: "int"
+  - name: "image"
+    description: "docker image to use"
+    required: true
+    parameterType: "string"
+  - name: "imageTag"
+    description: "image tag (ie. version)"
+    required: true
+    parameterType: "string"
+  - name: "host"
+    description: "hostname application will be exposed on (eg. go-boldly.svc.platform.myobdev.com)"
+    required: true
+    parameterType: string
