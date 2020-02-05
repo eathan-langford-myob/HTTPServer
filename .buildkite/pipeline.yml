@@ -16,4 +16,4 @@ steps:
   - label: "Deploying :hamburger:"
     command: ./ops/scripts/deploy.sh
     agents:
-      queue: "fma-dev-dflt"
+      queue: "europa-preprod-fma"
