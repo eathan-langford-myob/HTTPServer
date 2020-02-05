@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a84f8b9-9706-46af-9b62-0f31a563b92a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ops/scripts/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ops/scripts/build.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -70,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/ops/scripts/build.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -560,7 +561,7 @@
       <workItem from="1580264889095" duration="69000" />
       <workItem from="1580268740195" duration="969000" />
       <workItem from="1580270655151" duration="1535000" />
-      <workItem from="1580272812937" duration="31828000" />
+      <workItem from="1580272812937" duration="32364000" />
     </task>
     <servers />
   </component>
@@ -597,10 +598,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264780000" />
+    <option name="totallyTimeSpent" value="265316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20926517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1153,7 +1155,7 @@
     <entry file="file://$PROJECT_DIR$/ops/scripts/build.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
         </state>
       </provider>
     </entry>
