@@ -8,7 +8,7 @@ echo "---------------------GETTING AWS AUTH---------------------"
 $(aws ecr get-login --no-include-email --region ap-southeast-2)
 
 echo "---------------------BUILDING IMAGE---------------------"
-docker build -t "${ECR_Name}" . -f "${Dockerfile}"
+docker build -t "${ECR_Name}:${tag}" . -f "${Dockerfile}"
 
 echo "---------------------TAGGING IMAGE---------------------"
 docker tag "${ECR_Name}:${tag}" "${ECR}"
