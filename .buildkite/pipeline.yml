@@ -10,12 +10,10 @@ steps:
     command: ./ops/scripts/build.sh
     agents:
       queue: "fma-dev-dflt"
-#    artifact_paths:
- #     - "build/libs/*"
-#
-#  - wait
-#
- # - label: "Spin up container! :hamburger:"
-  #  command: ./ops/scripts/start.sh
-   # agents:
-    #  queue: "fma-dev-dflt"
+
+  - wait
+
+  - label: "Deploying :hamburger:"
+    command: ./ops/scripts/deploy.sh
+    agents:
+      queue: "fma-dev-dflt"

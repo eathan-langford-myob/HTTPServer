@@ -5,7 +5,7 @@ apiVersion: "v1"
 metadata:
   name: "eathan-hello-world"
   annotations:
-    description: "Eathans HelloWorld application"
+    description: "eathan app release template"
 objects:
 
   - kind: Deployment
@@ -17,7 +17,7 @@ objects:
         app: $(name)
         repo: $(repo)
     spec:
-      replicas: 1
+      replicas: 2
       selector:
         matchLabels:
           app: $(name)
@@ -34,7 +34,7 @@ objects:
                 - containerPort: $((containerPort))
 
   - kind: Ingress
-    apiVersion: v1
+    apiVersion: networking.k8s.io/v1beta1
     metadata:
       name: $(name)
       namespace: $(namespace)
@@ -73,7 +73,6 @@ objects:
           targetPort: $((containerPort))
       selector:
         app: $(name)
-        repo: $(repo)
 
 parameters:
   - name: "name"
@@ -86,14 +85,6 @@ parameters:
     parameterType: string
   - name: "repo"
     description: "source code repository (eg jupiter-docs)"
-    required: true
-    parameterType: string
-  - name: "routing-key"
-    description: "victor ops routing key"
-    required: true
-    parameterType: string
-  - name: "myob-product"
-    description: "the customer facing or internal product (eg essentials)"
     required: true
     parameterType: string
   - name: "containerPort"

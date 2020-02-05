@@ -3,6 +3,5 @@ repo: eathan-hello-world
 name: eathan-hello-world
 namespace: fma
 image: 945367126992.dkr.ecr.ap-southeast-2.amazonaws.com/eathan-hello-world
-imageTag: ${BUILDKITE_BUILD_NUMBER}
 containerPort: "80"
 host: eathan-hello-world.svc.platform.myobdev.com
