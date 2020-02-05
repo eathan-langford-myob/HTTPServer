@@ -7,8 +7,7 @@ steps:
   - wait
 
   - label: "Building Image & Pushing to ECR :green_salad:"
-    command: ./ops/scripts/build.sh ${BUILDKITE_BUILD_NUMBER}
-    agents:
+    command: ./ops/scripts/build.sh
       queue: "fma-dev-dflt"
 
   - wait
