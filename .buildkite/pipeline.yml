@@ -13,6 +13,6 @@ steps:
   - wait
 
   - label: "Deploying :hamburger:"
-    command: ./ops/scripts/deploy.sh ${BUILDKITE_BUILD_NUMBER}
+    command: ./ops/scripts/deploy.sh
     agents:
       queue: "fma-dev-dflt"
