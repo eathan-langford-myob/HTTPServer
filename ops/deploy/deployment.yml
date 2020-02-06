@@ -28,7 +28,7 @@ objects:
             repo: $(repo)
         spec:
           containers:
-            - name: nginx
+            - name: $(name)
               image: $(image):$(imageTag)
               ports:
                 - containerPort: $((containerPort))
@@ -47,7 +47,6 @@ objects:
       tls:
         - hosts:
             - $(host)
-          secretName: $(name)-tls
       rules:
         - host: $(host)
           http:

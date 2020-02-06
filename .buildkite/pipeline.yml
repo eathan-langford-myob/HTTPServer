@@ -1,19 +1,19 @@
 steps:
-  - label: "Testing! :cut_of_meat:"
+  - label: ":cut_of_meat: Testing!"
     command: ./ops/scripts/test.sh
     agents:
       queue: "fma-dev-dflt"
 
   - wait
 
-  - label: "Building Image & Pushing to ECR :green_salad:"
+  - label: ":green_salad: Building & Pushing"
     command: ./ops/scripts/build.sh
     agents:
       queue: "fma-dev-dflt"
 
   - wait
 
-  - label: "Deploying :hamburger:"
+  - label: ":hamburger: Deploying"
     command: ./ops/scripts/deploy.sh
     agents:
       queue: "europa-preprod-fma"
