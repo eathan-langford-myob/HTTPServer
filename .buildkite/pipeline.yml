@@ -7,7 +7,7 @@ steps:
   - wait
 
   - label: ":green_salad: Building & Pushing"
-    command: ./ops/scripts/build.sh $${BUILDKITE_BUILD_NUMBER}
+    command: ./ops/scripts/build.sh
     agents:
       queue: "fma-dev-dflt"
 
