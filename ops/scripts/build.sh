@@ -1,5 +1,5 @@
 tag=$1
-
+echo ${tag}
 
 echo "---------------------GETTING AWS AUTH---------------------"
 $(aws ecr get-login --no-include-email --region ap-southeast-2)

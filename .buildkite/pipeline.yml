@@ -1,13 +1,13 @@
 steps:
   - label: ":cut_of_meat: Testing!"
-    command: ./ops/scripts/test.sh
+    command: echo pass
     agents:
       queue: "fma-dev-dflt"
 
   - wait
 
   - label: ":green_salad: Building & Pushing"
-    command: ./ops/scripts/build.sh
+    command: ./ops/scripts/build.sh ${BUILDKITE_BUILD_NUMBER}
     agents:
       queue: "fma-dev-dflt"
 
