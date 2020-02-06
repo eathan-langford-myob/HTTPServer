@@ -1,6 +1,6 @@
 steps:
   - label: ":cut_of_meat: Testing!"
-    command: echo pass
+    command: ./ops/scripts/test.sh
     agents:
       queue: "fma-dev-dflt"
 
