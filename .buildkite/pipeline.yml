@@ -1,5 +1,5 @@
 steps:
-  - label: ":cut_of_meat: Testing!"
+  - label: ":cut_of_meat: Testing"
     command: ./ops/scripts/test.sh
     agents:
       queue: "fma-dev-dflt"
@@ -17,3 +17,10 @@ steps:
     command: ./ops/scripts/deploy.sh
     agents:
       queue: "europa-preprod-fma"
+
+  - wait
+
+  - label: ":cup_with_straw: Smoke Test"
+    command: ./ops/scripts/smoke_test.sh
+    agents:
+      queue: "fma-dev-dflt"
