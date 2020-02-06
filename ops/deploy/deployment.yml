@@ -40,7 +40,6 @@ objects:
       namespace: $(namespace)
       labels:
         app: $(name)
-        repo: $(repo)
       annotations:
         kubernetes.io/tls-acme: "true"
     spec:
