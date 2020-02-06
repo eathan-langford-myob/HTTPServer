@@ -20,7 +20,7 @@ steps:
 
   - wait
 
-  - label: ":cup_with_straw: Smoke Test"
-    command: ./ops/scripts/smoke_test.sh
+  - label: ":cup_with_straw: Health Check"
+    command: ./ops/scripts/health_check.sh
     agents:
       queue: "fma-dev-dflt"
