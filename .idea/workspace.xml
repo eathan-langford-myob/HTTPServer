@@ -141,8 +141,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ops/deploy/deployment.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="47" column="21" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="47" selection-end-column="21" />
+            <state relative-caret-position="-1119">
+              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -561,7 +561,7 @@
       <workItem from="1580264889095" duration="69000" />
       <workItem from="1580268740195" duration="969000" />
       <workItem from="1580270655151" duration="1535000" />
-      <workItem from="1580272812937" duration="44124000" />
+      <workItem from="1580272812937" duration="44583000" />
     </task>
     <servers />
   </component>
@@ -598,7 +598,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277076000" />
+    <option name="totallyTimeSpent" value="277535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -1154,8 +1154,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ops/deploy/deployment.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="47" column="21" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="47" selection-end-column="21" />
+        <state relative-caret-position="-1119">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
         </state>
       </provider>
     </entry>

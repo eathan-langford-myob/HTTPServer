@@ -1,21 +1,16 @@
-# Basic application with templating
 ---
-kind: "Template"
-apiVersion: "v1"
+kind: Template
+apiVersion: v1
 metadata:
-  name: "eathan-hello-world"
+  name: "$(name)"
   annotations:
-    description: "eathan app release template"
+    description: "$(name) app template"
 objects:
-
   - kind: Deployment
     apiVersion: apps/v1
     metadata:
-      name: $(name)
+      name: "$(name)-deploy"
       namespace: $(namespace)
-      labels:
-        app: $(name)
-        repo: $(repo)
     spec:
       replicas: 1
       selector:
@@ -25,18 +20,16 @@ objects:
         metadata:
           labels:
             app: $(name)
-            repo: $(repo)
         spec:
           containers:
             - name: $(name)
-              image: $(image):$(imageTag)
+              image: "$(image):$(imageTag)"
               ports:
                 - containerPort: $((containerPort))
-
   - kind: Ingress
     apiVersion: networking.k8s.io/v1beta1
     metadata:
-      name: $(name)
+      name: "$(name)-ingress"
       namespace: $(namespace)
       labels:
         app: $(name)
@@ -46,23 +39,23 @@ objects:
       tls:
         - hosts:
             - $(host)
+          secretName: "$(name)-tls"
       rules:
         - host: $(host)
           http:
             paths:
               - path: /
                 backend:
-                  serviceName: $(name)
+                  serviceName: "$(name)-service"
                   servicePort: 80
-
   - kind: Service
     apiVersion: v1
     metadata:
-      name: $(name)
+      name: "$(name)-service"
       namespace: $(namespace)
       labels:
         app: $(name)
-        repo: $(repo)
+        namespace: $(namespace)
       annotations:
         prometheus.io/scrape: "true"
     spec:
@@ -71,7 +64,6 @@ objects:
           targetPort: $((containerPort))
       selector:
         app: $(name)
-
 parameters:
   - name: "name"
     description: "application name"
@@ -81,22 +73,18 @@ parameters:
     description: "kube namespace"
     required: true
     parameterType: string
-  - name: "repo"
-    description: "source code repository (eg jupiter-docs)"
+  - name: "image"
+    description: "docker image to use"
+    required: true
+    parameterType: string
+  - name: "imageTag"
+    description: "image tag (ie. version)"
     required: true
     parameterType: string
   - name: "containerPort"
     description: "Kube demo port"
     required: true
-    parameterType: "int"
-  - name: "image"
-    description: "docker image to use"
-    required: true
-    parameterType: "string"
-  - name: "imageTag"
-    description: "image tag (ie. version)"
-    required: true
-    parameterType: "string"
+    parameterType: int
   - name: "host"
     description: "hostname application will be exposed on (eg. go-boldly.svc.platform.myobdev.com)"
     required: true
