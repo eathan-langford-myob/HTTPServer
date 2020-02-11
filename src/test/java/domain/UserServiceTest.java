@@ -1,6 +1,6 @@
 package domain;
 
-import handlers.TestServer;
+import server.TestServer;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

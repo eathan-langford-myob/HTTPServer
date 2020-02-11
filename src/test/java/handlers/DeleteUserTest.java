@@ -5,6 +5,7 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import server.TestServer;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 

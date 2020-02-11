@@ -1,8 +1,7 @@
-package handlers;
+package server;
 
 import db.User;
 import db.UserDB;
-import server.Server;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
