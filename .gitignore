@@ -30,6 +30,10 @@ hs_err_pid*
 .gradle
 build/
 
+### SECRET ###
+./secret.yml
+secret.yml
+
 # Ignore Gradle GUI config
 gradle-app.setting
 

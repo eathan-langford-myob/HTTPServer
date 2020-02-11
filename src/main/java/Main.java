@@ -3,7 +3,7 @@ import db.UserDB;
 import server.Server;
 
 public class Main {
-    private static User admin_user = new User("Eathan", true);
+    private static User admin_user = new User(System.getenv("ADMIN_NAME"), true);
     private static UserDB database = new UserDB();
     private static Server server;
 

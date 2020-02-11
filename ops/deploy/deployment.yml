@@ -24,6 +24,12 @@ objects:
           containers:
             - name: $(name)
               image: "$(image):$(imageTag)"
+              env:
+                - name: ADMIN_NAME
+                  valueFrom:
+                    secretKeyRef:
+                      key: ADMIN_NAME
+                      name: eathan-world-secret
               ports:
                 - containerPort: $((containerPort))
   - kind: Ingress

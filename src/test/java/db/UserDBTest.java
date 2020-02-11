@@ -11,7 +11,7 @@ public class UserDBTest {
 
     @Before
     public void setUp() {
-        adminUser = new User("Eathan");
+        adminUser = new User(System.getenv("ADMIN_NAME"));
     }
 
     @After
