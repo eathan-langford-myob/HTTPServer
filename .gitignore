@@ -33,6 +33,7 @@ build/
 ### SECRET ###
 ./secret.yml
 secret.yml
+*.secret.yml
 
 # Ignore Gradle GUI config
 gradle-app.setting
