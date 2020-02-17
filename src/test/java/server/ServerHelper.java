@@ -6,9 +6,9 @@ import db.UserDB;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class TestServer {
+public class ServerHelper {
     public Server server;
-    public User admin = new User("Eathan");
+    public User admin = new User("Eathan", true);
     public UserDB DB = new UserDB();
     public String localPath = "http://localhost:8080/";
     public String usersPath = "http://localhost:8080/users";

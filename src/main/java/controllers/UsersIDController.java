@@ -4,9 +4,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import db.User;
 import domain.UserService;
-import utilities.HttpRequestValidator;
-import utilities.HttpUtils;
-import utilities.StatusCodes;
+import utilities.*;
 
 import java.io.IOException;
 import java.util.ResourceBundle;
@@ -27,7 +25,7 @@ public class UsersIDController implements HttpHandler {
         requestPath = exchange.getRequestURI().getPath();
         IDFromPath = HttpUtils.getIdFromPath(requestPath);
         String requestMethod = exchange.getRequestMethod();
-        if (HttpRequestValidator.isValidIdRequest(requestPath)) {
+        if (UserHttpRequestValidator.isValidIdRequest(requestPath)) {
             switch (requestMethod) {
                 case "GET":
                     requestUserByIdHandler(exchange);
@@ -46,41 +44,41 @@ public class UsersIDController implements HttpHandler {
             HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("path_error"));
         }
     }
+    // business validation happens at domain level in the user service
+    // maybe create own validation exception - or out of the box (illegal argument exception) TRY CATCH
 
     private void updateUserHandler(HttpExchange exchange) throws IOException {
         String nameFromRequest = HttpUtils.getRequestFromBody(exchange.getRequestBody());
-        if (!nameFromRequest.isEmpty()
-                && HttpRequestValidator.isValidUpdateRequest(nameFromRequest)
-                && userService.isSameName(IDFromPath, nameFromRequest)
-                && !userService.isUserAdmin(IDFromPath)) {
+        try {
             String newName = nameFromRequest.split(",")[1].trim();
-            userService.updateUserNameByID(IDFromPath, newName);
-            HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, outputMessages.getString("success_put_user"));
-        } else {
-            HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("error_put_user"));
-
-        }
+                userService.updateUserNameByID(IDFromPath, newName);
+                HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, outputMessages.getString("success_put_user"));
+            }
+        catch (InvalidRequestException e) {
+                HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
+            }
     }
 
     private void deleteUserHandler(HttpExchange exchange) throws IOException {
-        if (userService.isUserInDB(IDFromPath)) {
+        try {
             userService.removeUserByID(IDFromPath);
             HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, outputMessages.getString("success_delete_user"));
-        } else {
-            HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("error_delete_user"));
+        }
+        catch (InvalidRequestException e){
+            HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
         }
     }
 
-    private User getValidSingleUserByID() {
-        return userService.ReadByID(IDFromPath);
+    private User getValidSingleUserByID() throws InvalidRequestException {
+            return userService.ReadByID(IDFromPath);
     }
 
     private void requestUserByIdHandler(HttpExchange exchange) throws IOException {
-        if (userService.isUserInDB(IDFromPath)) {
+        try {
             User singleUser = getValidSingleUserByID();
             HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, singleUser.getName());
-        } else {
-            HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("error_getting_user"));
+        } catch (InvalidRequestException e) {
+            HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
         }
     }
 }

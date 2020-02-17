@@ -7,7 +7,7 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import server.TestServer;
+import server.ServerHelper;
 
 import java.util.Date;
 
@@ -15,7 +15,7 @@ import static io.restassured.RestAssured.when;
 import static org.hamcrest.CoreMatchers.containsString;
 
 public class GreetingTest {
-    private TestServer testing = new TestServer();
+    private ServerHelper testing = new ServerHelper();
 
 
     @Before

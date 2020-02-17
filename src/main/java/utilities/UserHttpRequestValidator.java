@@ -1,6 +1,6 @@
 package utilities;
 
-public class HttpRequestValidator {
+public class UserHttpRequestValidator {
 
     public static boolean isValidIdRequest(String urlRequest) {
         String[] requestBreakdown = urlRequest.split("/users");

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="utilities.HttpRequestValidatorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-01-30T04:59:17" hostname="C02Y30BAJG5J" time="0.002">
-  <properties/>
-  <testcase name="shouldReturnFalse_WhenAddressEndsWithInvalidIDRequest" classname="utilities.HttpRequestValidatorTest" time="0.002"/>
-  <testcase name="shouldReturnTrue_WhenRequestAddressIsAllUsers" classname="utilities.HttpRequestValidatorTest" time="0.0"/>
-  <testcase name="shouldReturnTrue_WhenAddressEndsWithValidIDRequest" classname="utilities.HttpRequestValidatorTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

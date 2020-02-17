@@ -6,13 +6,13 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import server.TestServer;
+import server.ServerHelper;
 
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.CoreMatchers.containsString;
 
 public class PostUserTest {
-    private TestServer testing = new TestServer();
+    private ServerHelper testing = new ServerHelper();
 
 
     @Before

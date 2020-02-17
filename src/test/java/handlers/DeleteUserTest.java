@@ -5,12 +5,12 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import server.TestServer;
+import server.ServerHelper;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class DeleteUserTest {
-    private TestServer testing = new TestServer();
+    private ServerHelper testing = new ServerHelper();
 
 
     @Before

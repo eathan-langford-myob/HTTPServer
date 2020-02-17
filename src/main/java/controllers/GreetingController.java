@@ -4,10 +4,10 @@ import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import domain.UserService;
+import utilities.HttpUtils;
 import utilities.StatusCodes;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -30,14 +30,15 @@ public class GreetingController implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
+        if (!exchange.getRequestURI().getPath().equals("/")) {
+            HttpUtils.writeResponse(StatusCodes.NOT_FOUND.getCode(), exchange, outputMessages.getString("path_error"));
+            return;
+        }
+
         Headers responseHeaders = exchange.getResponseHeaders();
         responseHeaders.set("Content-Type", "text/plain");
-        System.out.println(exchange.getResponseHeaders());
         String users = collectNames();
         String response = outputMessages.getString("hello") + users + outputMessages.getString("time") + new Date().toString();
-        exchange.sendResponseHeaders(StatusCodes.OK.getCode(), response.length());
-        OutputStream os = exchange.getResponseBody();
-        os.write(response.getBytes());
-        os.close();
+        HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, response);
     }
 }

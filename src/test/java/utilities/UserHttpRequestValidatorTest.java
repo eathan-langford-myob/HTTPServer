@@ -5,23 +5,23 @@ package utilities;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class HttpRequestValidatorTest {
+public class UserHttpRequestValidatorTest {
 
     @Test
     public void shouldReturnTrue_WhenAddressEndsWithValidIDRequest() {
         String urlRequest = "/users/1";
-        Assert.assertTrue(HttpRequestValidator.isValidIdRequest(urlRequest));
+        Assert.assertTrue(UserHttpRequestValidator.isValidIdRequest(urlRequest));
     }
 
     @Test
     public void shouldReturnFalse_WhenAddressEndsWithInvalidIDRequest() {
         String urlRequest = "/users/Q";
-        Assert.assertFalse(HttpRequestValidator.isValidIdRequest(urlRequest));
+        Assert.assertFalse(UserHttpRequestValidator.isValidIdRequest(urlRequest));
     }
 
     @Test
     public void shouldReturnTrue_WhenRequestAddressIsAllUsers() {
         String urlRequest = "/users";
-        Assert.assertTrue(HttpRequestValidator.isAllUsersEndpoint(urlRequest));
+        Assert.assertTrue(UserHttpRequestValidator.isAllUsersEndpoint(urlRequest));
     }
 }
