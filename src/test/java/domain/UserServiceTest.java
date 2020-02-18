@@ -1,11 +1,11 @@
 package domain;
 
-import utilities.InvalidRequestException;
-import server.ServerHelper;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import server.ServerHelper;
+import utilities.InvalidRequestException;
 
 public class UserServiceTest {
     private ServerHelper testing = new ServerHelper();
@@ -28,7 +28,7 @@ public class UserServiceTest {
     @Test
     public void shouldDisplayAllUsers_WhenCallingUserServiceRead() {
         String actual = userService.readAll();
-        String expected = "[" +"1," + testing.admin.getName() +"]";
+        String expected = "[" + "1," + testing.admin.getName() + "]";
 
         Assert.assertEquals(expected, actual);
     }
@@ -40,21 +40,31 @@ public class UserServiceTest {
             userService.createUser(userName);
             Assert.assertTrue(userService.readAll().contains(userName));
         } catch (InvalidRequestException e) {
-            System.out.println(e.getMessage());;
+            System.out.println(e.getMessage());
         }
+    }
+
+    @Test(expected = InvalidRequestException.class)
+    public void shouldThrowException_WhenRequestIsEmpty() throws InvalidRequestException {
+        String userName = "";
+        userService.createUser(userName);
     }
 
     @Test
     public void shouldGetUserByID_WhenCallingUserServiceReadUser() {
         String expected = "Steven";
-       try {
-           userService.createUser(expected);
-           String actual = userService.ReadByID(2).getName();
-           Assert.assertEquals(expected, actual);
-       }
-       catch (InvalidRequestException e) {
-           System.out.println(e.getMessage());
-       }
+        try {
+            userService.createUser(expected);
+            String actual = userService.ReadByID(2).getName();
+            Assert.assertEquals(expected, actual);
+        } catch (InvalidRequestException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Test(expected = InvalidRequestException.class)
+    public void shouldThrowException_WhenReadingUserWithWrongID() throws InvalidRequestException {
+        userService.ReadByID(4);
     }
 
     @Test
@@ -64,7 +74,7 @@ public class UserServiceTest {
             userService.createUser(expected);
             Assert.assertTrue(userService.isUserInDB(2));
         } catch (InvalidRequestException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -77,8 +87,14 @@ public class UserServiceTest {
             userService.removeUserByID(2);
             Assert.assertFalse(userService.readAll().contains(userName));
         } catch (InvalidRequestException e) {
-            System.out.println(e.getMessage());;
+            System.out.println(e.getMessage());
+            ;
         }
+    }
+
+    @Test(expected = InvalidRequestException.class)
+    public void shouldThrowException_WhenRemovingWithWrongID() throws InvalidRequestException {
+        userService.removeUserByID(2);
     }
 
     @Test
@@ -92,10 +108,15 @@ public class UserServiceTest {
             String actual = userService.ReadByID(2).getName();
             Assert.assertEquals(expected, actual);
         } catch (InvalidRequestException e) {
-            System.out.println(e.getMessage());;
+            System.out.println(e.getMessage());
+            ;
         }
     }
 
+    @Test(expected = InvalidRequestException.class)
+    public void shouldThrowException_WhenCallingUpdateByIDWithWrongID() throws InvalidRequestException {
+        userService.updateUserNameByID(2, "Steve");
+    }
 
 }
 

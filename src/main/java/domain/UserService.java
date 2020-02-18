@@ -48,7 +48,7 @@ this.outputMessages = outputMessages;
     }
 
     public void removeUserByID(int IDfromPath) throws InvalidRequestException {
-        if (isUserInDB(IDfromPath)) {
+        if (isUserEditable(IDfromPath)) {
             database.deleteUserByID(IDfromPath);
         }else {
             throw new InvalidRequestException(outputMessages.getString("error_delete_user"));
@@ -56,7 +56,7 @@ this.outputMessages = outputMessages;
     }
 
     public void updateUserNameByID(int IDfromPath, String nameFromRequest) throws InvalidRequestException {
-          if (isUserInDB(IDfromPath) && !isUserAdmin(IDfromPath)) {
+          if (isUserEditable(IDfromPath)) {
                   database.getUserByID(IDfromPath);
                   User queryUser = database.getUserByID(IDfromPath);
                   queryUser.setName(nameFromRequest);
@@ -64,8 +64,10 @@ this.outputMessages = outputMessages;
               throw new InvalidRequestException(outputMessages.getString("error_put_user"));
           }
     }
-
-    public boolean isUserAdmin(int ID) {
+    private boolean isUserEditable(int IDfromPath) {
+        return isUserInDB(IDfromPath) && !isUserAdmin(IDfromPath);
+    }
+    private boolean isUserAdmin(int ID) {
            return database.getUserByID(ID).isAdmin();
     }
 

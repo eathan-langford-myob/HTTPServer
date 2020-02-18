@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="domain.UserServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-02-17T14:05:14" hostname="C02Y30BAJG5J" time="6.128">
+<testsuite name="domain.UserServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-18T00:44:16" hostname="C02Y30BAJG5J" time="1.066">
   <properties/>
-  <testcase name="shouldReturnTrue_WhenUserExistsInDB" classname="domain.UserServiceTest" time="1.053"/>
-  <testcase name="shouldCreateUser_WhenCallingUserServiceCreate" classname="domain.UserServiceTest" time="1.01"/>
-  <testcase name="shouldGetUserByID_WhenCallingUserServiceReadUser" classname="domain.UserServiceTest" time="1.009"/>
-  <testcase name="shouldUpdateUserName_WhenCallingUserServiceUpdate" classname="domain.UserServiceTest" time="1.013"/>
-  <testcase name="shouldRemoveUser_WhenUsingIDWithUserService" classname="domain.UserServiceTest" time="1.022"/>
-  <testcase name="shouldDisplayAllUsers_WhenCallingUserServiceRead" classname="domain.UserServiceTest" time="1.018"/>
+  <testcase name="shouldThrowException_WhenCallingUpdateByIDWithWrongID" classname="domain.UserServiceTest" time="1.066"/>
   <system-out><![CDATA[Server Connection Created
-Server Connection Created
-Server Connection Created
-Server Connection Created
-Server Connection Created
-Server Connection Created
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
