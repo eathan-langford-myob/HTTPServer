@@ -4,8 +4,6 @@ public class User {
     private String name;
     private boolean admin;
 
-    //TODO write more User and UserDB tests!
-
     public User(String name, boolean admin) {
         this.name = name;
         this.admin = admin;

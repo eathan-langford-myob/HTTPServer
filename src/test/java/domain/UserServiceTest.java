@@ -13,8 +13,6 @@ import java.util.ResourceBundle;
 public class UserServiceTest {
     private UserService userService;
 
-//TODO remove server logic from tests, test method behaviour
-
     @Before
     public void setUp() {
         UserDB database = new UserDB();

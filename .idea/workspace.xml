@@ -6,37 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a84f8b9-9706-46af-9b62-0f31a563b92a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DB/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/DB/DB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DB/UserDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/DB/UserDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controllers/UsersIDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controllers/UsersIDController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/domain/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/domain/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/domain/UserServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/domain/UserServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/handlers/GreetingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/handlers/GreetingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/domain.UserServiceTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/domain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-domain.UserServiceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/scripts/health_check.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ops/scripts/health_check.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UsersIDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UsersIDController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/UserDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/UserDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/domain/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/handlers/GreetingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/handlers/GreetingTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="2a84f8b9-9706-46af-9b62-0f31a563b92a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -106,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/server/ServerHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="100" selection-start-line="14" selection-start-column="100" selection-end-line="14" selection-end-column="100" />
+            <state relative-caret-position="168">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -672,7 +642,7 @@
       <workItem from="1580270655151" duration="1535000" />
       <workItem from="1580272812937" duration="53082000" />
       <workItem from="1581310601368" duration="6571000" />
-      <workItem from="1581460257559" duration="43720000" />
+      <workItem from="1581460257559" duration="44088000" />
     </task>
     <task id="LOCAL-00001" summary="added readiness timeout">
       <created>1581400230480</created>
@@ -685,9 +655,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserHttpRequestValidatorTest_shouldReturnTrue_WhenRequestAddressIsAllUsers - 2020.02.18 at 17h 06m 55s.xml">
-      <configuration name="UserHttpRequestValidatorTest.shouldReturnTrue_WhenRequestAddressIsAllUsers" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="GreetingTest_shouldThrowInvalidRequest_WhenGreetingEndpointIsIncorrect - 2020.02.18 at 17h 13m 59s.xml">
       <configuration name="GreetingTest.shouldThrowInvalidRequest_WhenGreetingEndpointIsIncorrect" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -715,9 +682,12 @@
     <history-entry file="Tests_in_'Hello-World_test' - 2020.02.19 at 11h 25m 56s.xml">
       <configuration name="Tests in 'Hello-World.test'" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="Tests_in_'Hello-World_test' - 2020.02.19 at 11h 27m 01s.xml">
+      <configuration name="Tests in 'Hello-World.test'" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="336325000" />
+    <option name="totallyTimeSpent" value="336693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -730,9 +700,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="962" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18636848" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18636848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -742,14 +711,14 @@
       <window_info id="JRebel" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3226141" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.30679157" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.30679157" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.323185" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.29039812" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32897383" />
       <window_info anchor="bottom" id="Regex" order="8" weight="0.32997987" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.31615925" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.31615925" />
       <window_info anchor="bottom" id="Docker" order="10" weight="0.3290398" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50061053" side_tool="true" weight="0.46576762" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -1342,8 +1311,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/server/ServerHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="100" selection-start-line="14" selection-start-column="100" selection-end-line="14" selection-end-column="100" />
+        <state relative-caret-position="168">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
