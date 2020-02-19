@@ -1,34 +1,38 @@
 package domain;
 
+import db.User;
+import db.UserDB;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import server.ServerHelper;
 import utilities.InvalidRequestException;
 
+import java.util.ResourceBundle;
+
 public class UserServiceTest {
-    private ServerHelper testing = new ServerHelper();
     private UserService userService;
 
 //TODO remove server logic from tests, test method behaviour
 
     @Before
-    public void setUp() throws Exception {
-        testing.setup();
-        userService = new UserService(testing.DB, testing.outputMessages);
+    public void setUp() {
+        UserDB database = new UserDB();
+        User adminUser = new User("Eathan", true);
+        database.addUser(adminUser);
+        ResourceBundle outputMessages = ResourceBundle.getBundle("OutputMessages");
+        userService = new UserService(database, outputMessages);
     }
 
     @After
     public void tearDown() {
-        testing.tearDown();
     }
 
 
     @Test
     public void shouldDisplayAllUsers_WhenCallingUserServiceRead() {
         String actual = userService.readAll();
-        String expected = "[" + "1," + testing.admin.getName() + "]";
+        String expected = "[" + "1,Eathan" + "]";
 
         Assert.assertEquals(expected, actual);
     }
@@ -68,14 +72,10 @@ public class UserServiceTest {
     }
 
     @Test
-    public void shouldReturnTrue_WhenUserExistsInDB() {
+    public void shouldReturnTrue_WhenUserExistsInDB() throws InvalidRequestException {
         String expected = "Batman";
-        try {
             userService.createUser(expected);
             Assert.assertTrue(userService.isUserInDB(2));
-        } catch (InvalidRequestException e) {
-            System.out.println(e.getMessage());
-        }
     }
 
     @Test

@@ -42,4 +42,10 @@ public class UserDB implements DB {
     public void deleteUserByID(long ID) {
         users.remove(ID);
     }
+
+    @Override
+    public void updateUserByID(long ID, String newName) {
+        User queryUser = getUserByID(ID);
+        queryUser.setName(newName);
+    }
 }

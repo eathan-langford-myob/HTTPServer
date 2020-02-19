@@ -57,9 +57,7 @@ this.outputMessages = outputMessages;
 
     public void updateUserNameByID(int IDfromPath, String nameFromRequest) throws InvalidRequestException {
           if (isUserEditable(IDfromPath)) {
-                  database.getUserByID(IDfromPath);
-                  User queryUser = database.getUserByID(IDfromPath);
-                  queryUser.setName(nameFromRequest);
+                  database.updateUserByID(IDfromPath, nameFromRequest);
           } else {
               throw new InvalidRequestException(outputMessages.getString("error_put_user"));
           }

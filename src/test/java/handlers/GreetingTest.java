@@ -60,4 +60,13 @@ public class GreetingTest {
                 statusCode(200).
                 body(containsString(testing.admin.getName()+" and Larry,"));
     }
+
+    @Test
+    public void shouldThrowInvalidRequest_WhenGreetingEndpointIsIncorrect() {
+       when().
+               get(testing.localPath+"GreetMePlease").
+               then().
+               statusCode(404).
+               body(containsString(testing.outputMessages.getString("path_error")));
+    }
 }

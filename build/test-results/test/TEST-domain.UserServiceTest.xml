@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="domain.UserServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-18T00:44:16" hostname="C02Y30BAJG5J" time="1.066">
+<testsuite name="domain.UserServiceTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2020-02-19T00:26:45" hostname="C02Y30BAJG5J" time="0.013">
   <properties/>
-  <testcase name="shouldThrowException_WhenCallingUpdateByIDWithWrongID" classname="domain.UserServiceTest" time="1.066"/>
-  <system-out><![CDATA[Server Connection Created
-]]></system-out>
+  <testcase name="shouldThrowException_WhenRemovingWithWrongID" classname="domain.UserServiceTest" time="0.01"/>
+  <testcase name="shouldThrowException_WhenReadingUserWithWrongID" classname="domain.UserServiceTest" time="0.0"/>
+  <testcase name="shouldThrowException_WhenCallingUpdateByIDWithWrongID" classname="domain.UserServiceTest" time="0.0"/>
+  <testcase name="shouldReturnTrue_WhenUserExistsInDB" classname="domain.UserServiceTest" time="0.0"/>
+  <testcase name="shouldCreateUser_WhenCallingUserServiceCreate" classname="domain.UserServiceTest" time="0.0"/>
+  <testcase name="shouldGetUserByID_WhenCallingUserServiceReadUser" classname="domain.UserServiceTest" time="0.0"/>
+  <testcase name="shouldThrowException_WhenRequestIsEmpty" classname="domain.UserServiceTest" time="0.0"/>
+  <testcase name="shouldUpdateUserName_WhenCallingUserServiceUpdate" classname="domain.UserServiceTest" time="0.0"/>
+  <testcase name="shouldRemoveUser_WhenUsingIDWithUserService" classname="domain.UserServiceTest" time="0.0"/>
+  <testcase name="shouldDisplayAllUsers_WhenCallingUserServiceRead" classname="domain.UserServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

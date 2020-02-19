@@ -3,7 +3,6 @@ package db;
 import java.util.ArrayList;
 
 interface DB {
-    long ID = 1;
 
     User getUserByID(long ID);
 
@@ -14,4 +13,6 @@ interface DB {
     ArrayList<String> getAllDbEntries();
 
     void deleteUserByID(long ID);
+
+    void updateUserByID(long ID, String newName);
 }

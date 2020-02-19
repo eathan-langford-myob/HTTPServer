@@ -25,6 +25,7 @@ public class UsersIDController implements HttpHandler {
         requestPath = exchange.getRequestURI().getPath();
         IDFromPath = HttpUtils.getIdFromPath(requestPath);
         String requestMethod = exchange.getRequestMethod();
+
         if (UserHttpRequestValidator.isValidIdRequest(requestPath)) {
             switch (requestMethod) {
                 case "GET":
@@ -44,8 +45,8 @@ public class UsersIDController implements HttpHandler {
             HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("path_error"));
         }
     }
-    // business validation happens at domain level in the user service
-    // maybe create own validation exception - or out of the box (illegal argument exception) TRY CATCH
+    //TODO business validation happens at domain level in the user service
+    //TODO maybe create own validation exception - or out of the box (illegal argument exception) TRY CATCH
 
     private void updateUserHandler(HttpExchange exchange) throws IOException {
         String nameFromRequest = HttpUtils.getRequestFromBody(exchange.getRequestBody());
