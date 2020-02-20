@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import utilities.InvalidRequestException;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class UserServiceTest {
@@ -17,7 +18,8 @@ public class UserServiceTest {
         UserDB database = new UserDB();
         User adminUser = new User("Eathan", true);
         database.addUser(adminUser);
-        ResourceBundle outputMessages = ResourceBundle.getBundle("OutputMessages");
+        Locale locale = new Locale("en", "AU");
+        ResourceBundle outputMessages = ResourceBundle.getBundle("OutputMessages", locale);
         userService = new UserService(database, outputMessages);
     }
 
