@@ -4,7 +4,10 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import db.User;
 import domain.UserService;
-import utilities.*;
+import utilities.HttpUtils;
+import utilities.InvalidRequestException;
+import utilities.StatusCodes;
+import utilities.UserHttpRequestValidator;
 
 import java.io.IOException;
 import java.util.ResourceBundle;
@@ -41,7 +44,7 @@ public class UsersIDController implements HttpHandler {
                     break;
             }
         } else {
-            HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("path_error"));
+            HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("path_error"));
         }
     }
 
@@ -49,34 +52,28 @@ public class UsersIDController implements HttpHandler {
         String nameFromRequest = HttpUtils.getRequestFromBody(exchange.getRequestBody());
         try {
             String newName = nameFromRequest.split(",")[1].trim();
-                userService.updateUserNameByID(IDFromPath, newName);
-                HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, outputMessages.getString("success_put_user"));
-            }
-        catch (InvalidRequestException e) {
-                HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
-            }
+            userService.updateUserNameByID(IDFromPath, newName);
+            HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, outputMessages.getString("success_put_user"));
+        } catch (InvalidRequestException e) {
+            HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
+        }
     }
 
     private void deleteUserHandler(HttpExchange exchange) throws IOException {
         try {
             userService.removeUserByID(IDFromPath);
             HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, outputMessages.getString("success_delete_user"));
+        } catch (InvalidRequestException e) {
+            HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
         }
-        catch (InvalidRequestException e){
-            HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
-        }
-    }
-
-    private User getValidSingleUserByID() throws InvalidRequestException {
-            return userService.ReadByID(IDFromPath);
     }
 
     private void requestUserByIdHandler(HttpExchange exchange) throws IOException {
         try {
-            User singleUser = getValidSingleUserByID();
+            User singleUser = userService.ReadByID(IDFromPath);
             HttpUtils.writeResponse(StatusCodes.CREATED.getCode(), exchange, singleUser.getName());
         } catch (InvalidRequestException e) {
-            HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
+            HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
         }
     }
 }

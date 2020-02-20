@@ -22,12 +22,12 @@ public class UsersController implements HttpHandler {
     }
 
 
-@Override
+    @Override
     public void handle(HttpExchange exchange) throws IOException {
 
-    if (!exchange.getRequestURI().getPath().equals("/users")) {
-        HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("path_error"));
-    }
+        if (!exchange.getRequestURI().getPath().equals("/users")) {
+            HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("path_error"));
+        }
         Headers responseHeaders = exchange.getResponseHeaders();
         responseHeaders.set("Content-Type", "text/plain");
 
@@ -39,7 +39,7 @@ public class UsersController implements HttpHandler {
                 postUserHandler(exchange);
                 break;
             default:
-                HttpUtils.writeResponse( StatusCodes.NOT_ACCEPTED.getCode(), exchange, outputMessages.getString("request_error"));
+                HttpUtils.writeResponse(StatusCodes.NOT_ACCEPTED.getCode(), exchange, outputMessages.getString("request_error"));
                 break;
         }
     }
@@ -54,7 +54,7 @@ public class UsersController implements HttpHandler {
         try {
             userService.createUser(nameFromRequest);
             HttpUtils.writeResponse(StatusCodes.CREATED.getCode(), exchange, outputMessages.getString("success_post_user"));
-        } catch(InvalidRequestException e) {
+        } catch (InvalidRequestException e) {
             HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
 
         }
