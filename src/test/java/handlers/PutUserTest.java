@@ -56,11 +56,12 @@ public class PutUserTest {
     @Test
     public void putEndpointShouldFailWithWrongID() {
         RequestSpecification request = RestAssured.given();
-        request.post("Barry");
+        request.body("Barry");
+        request.post(testing.usersPath);
 
         request.body("Barry, Larry");
         request.
-                put(testing.usersPath + "/2").
+                put("http://localhost:8080/users/2").
                 then().
                 statusCode(400).
                 body(containsString(testing.outputMessages.getString("error_put_user")));

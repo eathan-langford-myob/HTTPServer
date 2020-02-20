@@ -1,4 +1,4 @@
-package utilities;
+package server;
 
 public class InvalidRequestException extends Exception {
     public InvalidRequestException() {

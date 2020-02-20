@@ -5,7 +5,7 @@ import db.UserDB;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import utilities.InvalidRequestException;
+import server.InvalidRequestException;
 
 import java.util.ResourceBundle;
 

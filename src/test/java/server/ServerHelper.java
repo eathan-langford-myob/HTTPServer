@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 
 public class ServerHelper {
     private Server server;
-    private final User admin = new User("Eathan", true);
+    public final User admin = new User("Eathan", true);
     public final String localPath = "http://localhost:8080/";
     public final String usersPath = "http://localhost:8080/users";
     public final ResourceBundle outputMessages = ResourceBundle.getBundle("OutputMessages", new Locale("en", "AU"));

@@ -1,11 +1,12 @@
 package controllers;
 
-import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import domain.UserService;
-import utilities.HttpUtils;
-import utilities.InvalidRequestException;
+import handlers.CreateNewUserHandler;
+import handlers.GetAllUsersHandler;
+import server.SimpleHttpRequest;
+import server.SimpleHttpResponse;
 import utilities.StatusCodes;
 
 import java.io.IOException;
@@ -24,40 +25,24 @@ public class UsersController implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
+        SimpleHttpRequest request = new SimpleHttpRequest(exchange);
 
-        if (!exchange.getRequestURI().getPath().equals("/users")) {
-            HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("path_error"));
+        if (!request.getPath().equals("/users")) {
+            new SimpleHttpResponse(request).write(StatusCodes.BAD_REQUEST.getCode(), "path_error");
         }
-        Headers responseHeaders = exchange.getResponseHeaders();
-        responseHeaders.set("Content-Type", "text/plain");
+//        Headers responseHeaders = exchange.getResponseHeaders();
+//        responseHeaders.set("Content-Type", "text/plain");
 
-        switch (exchange.getRequestMethod()) {
+        switch (request.getMethod()) {
             case "GET":
-                getAllUsersHandler(exchange);
+               new GetAllUsersHandler(request, userService).execute();
                 break;
             case "POST":
-                postUserHandler(exchange);
+                new CreateNewUserHandler(request, userService, outputMessages).execute();
                 break;
             default:
-                HttpUtils.writeResponse(StatusCodes.NOT_ACCEPTED.getCode(), exchange, outputMessages.getString("request_error"));
+                new SimpleHttpResponse(request).write(StatusCodes.NOT_ACCEPTED.getCode(), outputMessages.getString("request_error"));
                 break;
         }
-    }
-
-    private void getAllUsersHandler(HttpExchange exchange) throws IOException {
-        String allUsers = userService.readAll();
-        HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, allUsers);
-    }
-
-    private void postUserHandler(HttpExchange exchange) throws IOException {
-        String nameFromRequest = HttpUtils.getRequestFromBody(exchange.getRequestBody());
-        try {
-            userService.createUser(nameFromRequest);
-            HttpUtils.writeResponse(StatusCodes.CREATED.getCode(), exchange, outputMessages.getString("success_post_user"));
-        } catch (InvalidRequestException e) {
-            HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
-
-        }
-
     }
 }

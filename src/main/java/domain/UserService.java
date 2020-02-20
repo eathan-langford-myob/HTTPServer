@@ -1,6 +1,6 @@
 package domain;
 
-import utilities.InvalidRequestException;
+import server.InvalidRequestException;
 import db.User;
 import db.UserDB;
 import utilities.DBValidator;
@@ -31,41 +31,41 @@ this.outputMessages = outputMessages;
             User newUser = new User(nameFromRequest);
             database.addUser(newUser);
         } else {
-            throw new InvalidRequestException(outputMessages.getString("error_post_user"));
+            throw new InvalidRequestException("error_post_user");
         }
     }
 
-    public User ReadByID(int IDFromPath) throws InvalidRequestException {
+    public User ReadByID(long IDFromPath) throws InvalidRequestException {
         if (isUserInDB(IDFromPath)) {
             return database.getUserByID(IDFromPath);
         } else {
-            throw new InvalidRequestException(outputMessages.getString("error_getting_user"));
+            throw new InvalidRequestException("error_getting_user");
         }
     }
 
-    public boolean isUserInDB(int idFromPath) {
+    public boolean isUserInDB(long idFromPath) {
         return DBValidator.isUserInDatabase(database, idFromPath);
     }
 
-    public void removeUserByID(int IDfromPath) throws InvalidRequestException {
+    public void removeUserByID(long IDfromPath) throws InvalidRequestException {
         if (isUserEditable(IDfromPath)) {
             database.deleteUserByID(IDfromPath);
         }else {
-            throw new InvalidRequestException(outputMessages.getString("error_delete_user"));
+            throw new InvalidRequestException("error_delete_user");
         }
     }
 
-    public void updateUserNameByID(int IDfromPath, String nameFromRequest) throws InvalidRequestException {
+    public void updateUserNameByID(long IDfromPath, String nameFromRequest) throws InvalidRequestException {
           if (isUserEditable(IDfromPath)) {
                   database.updateUserByID(IDfromPath, nameFromRequest);
           } else {
-              throw new InvalidRequestException(outputMessages.getString("error_put_user"));
+              throw new InvalidRequestException("error_put_user");
           }
     }
-    private boolean isUserEditable(int IDfromPath) {
+    private boolean isUserEditable(long IDfromPath) {
         return isUserInDB(IDfromPath) && !isUserAdmin(IDfromPath);
     }
-    private boolean isUserAdmin(int ID) {
+    private boolean isUserAdmin(long ID) {
            return database.getUserByID(ID).isAdmin();
     }
 

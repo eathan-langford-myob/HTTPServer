@@ -2,10 +2,12 @@ package controllers;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import db.User;
 import domain.UserService;
-import utilities.HttpUtils;
-import utilities.InvalidRequestException;
+import handlers.DeleteSingleUserHandler;
+import handlers.GetSingleUserHandler;
+import handlers.UpdateSingleUserHandler;
+import server.SimpleHttpRequest;
+import server.SimpleHttpResponse;
 import utilities.StatusCodes;
 import utilities.UserHttpRequestValidator;
 
@@ -14,66 +16,34 @@ import java.util.ResourceBundle;
 
 public class UsersIDController implements HttpHandler {
     private final UserService userService;
-    private int IDFromPath;
     private final ResourceBundle outputMessages;
 
-    public UsersIDController(UserService userService, ResourceBundle resourceBundle) {
+    public UsersIDController(UserService userService, ResourceBundle outputMessages) {
         this.userService = userService;
-        this.outputMessages = resourceBundle;
+        this.outputMessages = outputMessages;
     }
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        String requestPath = exchange.getRequestURI().getPath();
-        IDFromPath = HttpUtils.getIdFromPath(requestPath);
-        String requestMethod = exchange.getRequestMethod();
+        SimpleHttpRequest request = new SimpleHttpRequest(exchange);
 
-        if (UserHttpRequestValidator.isValidIdRequest(requestPath)) {
-            switch (requestMethod) {
+        if (UserHttpRequestValidator.isValidIdRequest(request.getPath())) {
+            switch (request.getMethod()) {
                 case "GET":
-                    requestUserByIdHandler(exchange);
+                    new GetSingleUserHandler(request, userService, outputMessages).execute();
                     break;
                 case "DELETE":
-                    deleteUserHandler(exchange);
+                    new DeleteSingleUserHandler(request, userService, outputMessages).execute();
                     break;
                 case "PUT":
-                    updateUserHandler(exchange);
+                    new UpdateSingleUserHandler(request, userService, outputMessages).execute();
                     break;
                 default:
-                    HttpUtils.writeResponse(StatusCodes.NOT_ACCEPTED.getCode(), exchange, outputMessages.getString("request_error"));
+                    new SimpleHttpResponse(request).write(StatusCodes.NOT_ACCEPTED.getCode(),"request_error");
                     break;
             }
         } else {
-            HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("path_error"));
-        }
-    }
-
-    private void updateUserHandler(HttpExchange exchange) throws IOException {
-        String nameFromRequest = HttpUtils.getRequestFromBody(exchange.getRequestBody());
-        try {
-            String newName = nameFromRequest.split(",")[1].trim();
-            userService.updateUserNameByID(IDFromPath, newName);
-            HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, outputMessages.getString("success_put_user"));
-        } catch (InvalidRequestException e) {
-            HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
-        }
-    }
-
-    private void deleteUserHandler(HttpExchange exchange) throws IOException {
-        try {
-            userService.removeUserByID(IDFromPath);
-            HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, outputMessages.getString("success_delete_user"));
-        } catch (InvalidRequestException e) {
-            HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
-        }
-    }
-
-    private void requestUserByIdHandler(HttpExchange exchange) throws IOException {
-        try {
-            User singleUser = userService.ReadByID(IDFromPath);
-            HttpUtils.writeResponse(StatusCodes.CREATED.getCode(), exchange, singleUser.getName());
-        } catch (InvalidRequestException e) {
-            HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
+            new SimpleHttpResponse(request).write(StatusCodes.BAD_REQUEST.getCode(),"path_error");
         }
     }
 }
