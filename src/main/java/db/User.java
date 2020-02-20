@@ -2,7 +2,7 @@ package db;
 
 public class User {
     private String name;
-    private boolean admin;
+    private final boolean admin;
 
     public User(String name, boolean admin) {
         this.name = name;

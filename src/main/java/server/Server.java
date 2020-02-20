@@ -13,21 +13,22 @@ import java.util.ResourceBundle;
 
 public class Server {
     private HttpServer server;
-    private final String root_address = "/";
-    private final String users_endpoint = "/users";
-    private final String users_id_endpoint = "/users/";
-    private final int port = 8080;
     private final UserService userService;
-    Locale locale = new Locale("en", "AU");
-    private ResourceBundle outputMessages;
+    private final ResourceBundle outputMessages;
 
     public Server(UserDB DB){
+        Locale locale = new Locale("en", "AU");
         outputMessages = ResourceBundle.getBundle("OutputMessages", locale);
         this.userService = new UserService(DB, outputMessages);
     }
 
 
     public void createServerConnection() throws Exception {
+        int port = 8080;
+        String users_id_endpoint = "/users/";
+        String users_endpoint = "/users";
+        String root_address = "/";
+
         server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext(root_address, new GreetingController(userService, outputMessages));
         server.createContext(users_id_endpoint, new UsersIDController(userService, outputMessages));

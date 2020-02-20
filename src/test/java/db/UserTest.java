@@ -30,6 +30,13 @@ public class UserTest {
     }
 
     @Test
-    public void setName() {
+    public void shouldSetName_WhenCallingSetNameToUpdateName() {
+     User newUser = new User("Barry");
+     newUser.setName("Steve");
+
+     String actual = newUser.getName();
+     String expected = "Steve";
+
+     Assert.assertEquals(expected, actual);
     }
 }

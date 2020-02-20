@@ -15,8 +15,8 @@ import java.util.ResourceBundle;
 import static utilities.UserStringFormatter.formatUsersToString;
 
 public class GreetingController implements HttpHandler {
-    private UserService userService;
-    private ResourceBundle outputMessages;
+    private final UserService userService;
+    private final ResourceBundle outputMessages;
 
     public GreetingController(UserService userService, ResourceBundle outputMessages) {
         this.userService = userService;

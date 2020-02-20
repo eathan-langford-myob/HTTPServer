@@ -10,10 +10,9 @@ import java.io.IOException;
 import java.util.ResourceBundle;
 
 public class UsersIDController implements HttpHandler {
-    private UserService userService;
+    private final UserService userService;
     private int IDFromPath;
-    private String requestPath;
-    private ResourceBundle outputMessages;
+    private final ResourceBundle outputMessages;
 
     public UsersIDController(UserService userService, ResourceBundle resourceBundle) {
         this.userService = userService;
@@ -22,7 +21,7 @@ public class UsersIDController implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        requestPath = exchange.getRequestURI().getPath();
+        String requestPath = exchange.getRequestURI().getPath();
         IDFromPath = HttpUtils.getIdFromPath(requestPath);
         String requestMethod = exchange.getRequestMethod();
 

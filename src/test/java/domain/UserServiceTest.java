@@ -2,7 +2,6 @@ package domain;
 
 import db.User;
 import db.UserDB;
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,11 +20,6 @@ public class UserServiceTest {
         ResourceBundle outputMessages = ResourceBundle.getBundle("OutputMessages");
         userService = new UserService(database, outputMessages);
     }
-
-    @After
-    public void tearDown() {
-    }
-
 
     @Test
     public void shouldDisplayAllUsers_WhenCallingUserServiceRead() {

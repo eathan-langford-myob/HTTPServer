@@ -10,12 +10,11 @@ import java.util.Arrays;
 
 public class UserDBTest {
 
-    UserDB database = new UserDB();
-    User adminUser;
+    private UserDB database = new UserDB();
 
     @Before
     public void setUp() {
-        adminUser = new User("Eathan");
+        User adminUser = new User("Eathan");
         database.addUser(adminUser);
     }
 

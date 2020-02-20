@@ -15,7 +15,7 @@ import static io.restassured.RestAssured.when;
 import static org.hamcrest.CoreMatchers.containsString;
 
 public class GreetingTest {
-    private ServerHelper testing = new ServerHelper();
+    private final ServerHelper testing = new ServerHelper();
 
 
     @Before

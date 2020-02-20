@@ -12,8 +12,8 @@ import java.io.IOException;
 import java.util.ResourceBundle;
 
 public class UsersController implements HttpHandler {
-    private ResourceBundle outputMessages;
-    private UserService userService;
+    private final ResourceBundle outputMessages;
+    private final UserService userService;
 
 
     public UsersController(UserService userService, ResourceBundle outputMessages) {
@@ -29,7 +29,7 @@ public class UsersController implements HttpHandler {
         HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, outputMessages.getString("path_error"));
     }
         Headers responseHeaders = exchange.getResponseHeaders();
-        responseHeaders.set("Content-Type", "text/plain");;
+        responseHeaders.set("Content-Type", "text/plain");
 
         switch (exchange.getRequestMethod()) {
             case "GET":

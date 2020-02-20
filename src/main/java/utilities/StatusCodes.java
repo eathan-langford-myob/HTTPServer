@@ -9,7 +9,7 @@ public enum StatusCodes {
     NOT_ACCEPTED(405);
 
 
-    int code;
+    private final int code;
 
     public int getCode() {
         return code;

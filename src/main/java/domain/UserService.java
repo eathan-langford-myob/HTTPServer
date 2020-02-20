@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class UserService {
-    private UserDB database;
-    private ResourceBundle outputMessages;
+    private final UserDB database;
+    private final ResourceBundle outputMessages;
 
     public UserService(UserDB database, ResourceBundle outputMessages) {
 this.database = database;

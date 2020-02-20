@@ -12,10 +12,7 @@ public class DBValidator {
     }
 
     public static boolean isUserInDatabase(UserDB database, long ID) {
-        if (database.getUserByID(ID) != null) {
-            return true;
-        }
-        return false;
+        return database.getUserByID(ID) != null;
     }
 
 }

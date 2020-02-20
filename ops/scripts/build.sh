@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 echo "---------------------GETTING AWS AUTH---------------------"
 $(aws ecr get-login --no-include-email --region ap-southeast-2)
 echo "---------------------BUILDING IMAGE---------------------"

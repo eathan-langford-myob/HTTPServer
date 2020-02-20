@@ -11,7 +11,7 @@ import server.ServerHelper;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class GetUserTest {
-    private ServerHelper testing = new ServerHelper();
+    private final ServerHelper testing = new ServerHelper();
 
 
     @Before

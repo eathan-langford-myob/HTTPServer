@@ -10,7 +10,7 @@ import server.ServerHelper;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class DeleteUserTest {
-    private ServerHelper testing = new ServerHelper();
+    private final ServerHelper testing = new ServerHelper();
 
 
     @Before

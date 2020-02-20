@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class UserDB implements DB {
-    private HashMap<Long, User> users = new HashMap<>();
+    private final HashMap<Long, User> users = new HashMap<>();
     private long ID = 1;
 
     public UserDB() {
@@ -34,7 +34,7 @@ public class UserDB implements DB {
     @Override
     public ArrayList<String> getAllDbEntries() {
         ArrayList<String> collectEntriesFromDb = new ArrayList<>();
-        users.forEach((ID, user)-> collectEntriesFromDb.add(ID+","+user.getName()));
+        users.forEach((ID, user) -> collectEntriesFromDb.add(ID + "," + user.getName()));
         return collectEntriesFromDb;
     }
 
