@@ -18,7 +18,7 @@ public class Server {
 
     public Server(UserDB DB){
         Locale locale = new Locale("en", "AU");
-        outputMessages = ResourceBundle.getBundle("OutputMessages", locale);
+        this.outputMessages = ResourceBundle.getBundle("OutputMessages", locale);
         this.userService = new UserService(DB, outputMessages);
     }
 

@@ -1,5 +1,6 @@
 package controllers;
 
+import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import domain.UserService;
@@ -25,6 +26,8 @@ public class UsersIDController implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
+        Headers responseHeaders = exchange.getResponseHeaders();
+        responseHeaders.set("Content-Type", "text/plain");
         SimpleHttpRequest request = new SimpleHttpRequest(exchange);
 
         if (UserHttpRequestValidator.isValidIdRequest(request.getPath())) {
@@ -39,7 +42,7 @@ public class UsersIDController implements HttpHandler {
                     new UpdateSingleUserHandler(request, userService, outputMessages).execute();
                     break;
                 default:
-                    new SimpleHttpResponse(request).write(StatusCodes.NOT_ACCEPTED.getCode(),"request_error");
+                    new SimpleHttpResponse(request).write(StatusCodes.NOT_ACCEPTED.getCode(),outputMessages.getString("request_error"));
                     break;
             }
         } else {

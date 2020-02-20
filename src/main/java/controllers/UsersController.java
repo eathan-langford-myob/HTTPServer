@@ -1,5 +1,6 @@
 package controllers;
 
+import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import domain.UserService;
@@ -25,14 +26,13 @@ public class UsersController implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
+        Headers responseHeaders = exchange.getResponseHeaders();
+        responseHeaders.set("Content-Type", "text/plain");
         SimpleHttpRequest request = new SimpleHttpRequest(exchange);
 
         if (!request.getPath().equals("/users")) {
             new SimpleHttpResponse(request).write(StatusCodes.BAD_REQUEST.getCode(), "path_error");
         }
-//        Headers responseHeaders = exchange.getResponseHeaders();
-//        responseHeaders.set("Content-Type", "text/plain");
-
         switch (request.getMethod()) {
             case "GET":
                new GetAllUsersHandler(request, userService).execute();
