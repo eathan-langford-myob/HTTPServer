@@ -36,14 +36,10 @@ public class UserServiceTest {
     }
 
     @Test
-    public void shouldCreateUser_WhenCallingUserServiceCreate() {
+    public void shouldCreateUser_WhenCallingUserServiceCreate() throws InvalidRequestException {
         String userName = "Barry";
-        try {
             userService.createUser(userName);
             Assert.assertTrue(userService.readAll().contains(userName));
-        } catch (InvalidRequestException e) {
-            System.out.println(e.getMessage());
-        }
     }
 
     @Test(expected = InvalidRequestException.class)
@@ -53,15 +49,11 @@ public class UserServiceTest {
     }
 
     @Test
-    public void shouldGetUserByID_WhenCallingUserServiceReadUser() {
+    public void shouldGetUserByID_WhenCallingUserServiceReadUser() throws InvalidRequestException {
         String expected = "Steven";
-        try {
             userService.createUser(expected);
             String actual = userService.ReadByID(2).getName();
             Assert.assertEquals(expected, actual);
-        } catch (InvalidRequestException e) {
-            System.out.println(e.getMessage());
-        }
     }
 
     @Test(expected = InvalidRequestException.class)
@@ -72,22 +64,16 @@ public class UserServiceTest {
     @Test
     public void shouldReturnTrue_WhenUserExistsInDB() throws InvalidRequestException {
         String expected = "Batman";
-            userService.createUser(expected);
-            Assert.assertTrue(userService.isUserInDB(2));
+        userService.createUser(expected);
+        Assert.assertTrue(userService.isUserInDB(2));
     }
 
     @Test
-    public void shouldRemoveUser_WhenUsingIDWithUserService() {
+    public void shouldRemoveUser_WhenUsingIDWithUserService() throws InvalidRequestException {
         String userName = "Steve Rogers";
-
-        try {
-            userService.createUser(userName);
-            userService.removeUserByID(2);
-            Assert.assertFalse(userService.readAll().contains(userName));
-        } catch (InvalidRequestException e) {
-            System.out.println(e.getMessage());
-            ;
-        }
+        userService.createUser(userName);
+        userService.removeUserByID(2);
+        Assert.assertFalse(userService.readAll().contains(userName));
     }
 
     @Test(expected = InvalidRequestException.class)
@@ -96,19 +82,14 @@ public class UserServiceTest {
     }
 
     @Test
-    public void shouldUpdateUserName_WhenCallingUserServiceUpdate() {
+    public void shouldUpdateUserName_WhenCallingUserServiceUpdate() throws InvalidRequestException {
         String originalName = "Tony Stark";
         String expected = "IronMan";
 
-        try {
-            userService.createUser(originalName);
-            userService.updateUserNameByID(2, expected);
-            String actual = userService.ReadByID(2).getName();
-            Assert.assertEquals(expected, actual);
-        } catch (InvalidRequestException e) {
-            System.out.println(e.getMessage());
-            ;
-        }
+        userService.createUser(originalName);
+        userService.updateUserNameByID(2, expected);
+        String actual = userService.ReadByID(2).getName();
+        Assert.assertEquals(expected, actual);
     }
 
     @Test(expected = InvalidRequestException.class)

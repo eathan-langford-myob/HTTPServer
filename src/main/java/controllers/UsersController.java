@@ -53,7 +53,7 @@ public class UsersController implements HttpHandler {
         String nameFromRequest = HttpUtils.getRequestFromBody(exchange.getRequestBody());
         try {
             userService.createUser(nameFromRequest);
-            HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, outputMessages.getString("success_post_user"));
+            HttpUtils.writeResponse(StatusCodes.CREATED.getCode(), exchange, outputMessages.getString("success_post_user"));
         } catch(InvalidRequestException e) {
             HttpUtils.writeResponse(StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
 

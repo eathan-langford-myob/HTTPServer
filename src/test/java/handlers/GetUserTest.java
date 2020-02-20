@@ -38,6 +38,16 @@ public class GetUserTest {
     }
 
     @Test
+    public void shouldGet405Error_WhenDoingUnsupportedRequest() {
+        RequestSpecification request = RestAssured.given();
+        request.body("Steve");
+        request.post(testing.usersPath+"/4")
+                .then()
+                .statusCode(405)
+                .body(equalTo(testing.outputMessages.getString("request_error")));
+    }
+
+    @Test
     public void shouldReturnErrorBody_WhenGivenWrongID() {
         RequestSpecification request = RestAssured.given();
         request.get(testing.usersPath+"/2")

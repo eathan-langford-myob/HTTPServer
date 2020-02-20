@@ -75,7 +75,7 @@ public class UsersIDController implements HttpHandler {
     private void requestUserByIdHandler(HttpExchange exchange) throws IOException {
         try {
             User singleUser = getValidSingleUserByID();
-            HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, singleUser.getName());
+            HttpUtils.writeResponse(StatusCodes.CREATED.getCode(), exchange, singleUser.getName());
         } catch (InvalidRequestException e) {
             HttpUtils.writeResponse( StatusCodes.BAD_REQUEST.getCode(), exchange, e.getMessage());
         }
