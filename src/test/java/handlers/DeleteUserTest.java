@@ -39,9 +39,9 @@ public class DeleteUserTest {
         RequestSpecification request = RestAssured.given();
         request.body("Barry");
         request.post(testing.usersPath);
-        request.delete(testing.usersPath+"/2");
+        request.delete(testing.usersPath + "/2");
 
-        request.get(testing.usersPath+"/2")
+        request.get(testing.usersPath + "/2")
                 .then()
                 .body(equalTo(testing.outputMessages.getString("error_getting_user")));
     }

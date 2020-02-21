@@ -9,8 +9,6 @@ import org.junit.Before;
 import org.junit.Test;
 import server.ServerHelper;
 
-import java.util.Date;
-
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.CoreMatchers.containsString;
 
@@ -29,14 +27,13 @@ public class GreetingTest {
     }
 
 
-
     @Test
     public void shouldDisplayGreeting_WhenHittingRootEndpoint() {
         when().
                 get(testing.localPath).
                 then().
                 statusCode(200).
-                body(containsString(testing.outputMessages.getString("time") + new Date()));
+                body(containsString(testing.outputMessages.getString("hello")));
     }
 
     @Test
@@ -58,15 +55,15 @@ public class GreetingTest {
                 get(testing.localPath).
                 then().
                 statusCode(200).
-                body(containsString(testing.admin.getName()+" and Larry,"));
+                body(containsString(testing.admin.getName() + " and Larry,"));
     }
 
     @Test
     public void shouldThrowInvalidRequest_WhenGreetingEndpointIsIncorrect() {
-       when().
-               get(testing.localPath+"GreetMePlease").
-               then().
-               statusCode(404).
-               body(containsString(testing.outputMessages.getString("path_error")));
+        when().
+                get(testing.localPath + "GreetMePlease").
+                then().
+                statusCode(404).
+                body(containsString(testing.outputMessages.getString("path_error")));
     }
 }

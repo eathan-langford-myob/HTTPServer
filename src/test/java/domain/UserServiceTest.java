@@ -34,8 +34,8 @@ public class UserServiceTest {
     @Test
     public void shouldCreateUser_WhenCallingUserServiceCreate() throws InvalidRequestException {
         String userName = "Barry";
-            userService.createUser(userName);
-            Assert.assertTrue(userService.readAll().contains(userName));
+        userService.createUser(userName);
+        Assert.assertTrue(userService.readAll().contains(userName));
     }
 
     @Test(expected = InvalidRequestException.class)
@@ -47,9 +47,9 @@ public class UserServiceTest {
     @Test
     public void shouldGetUserByID_WhenCallingUserServiceReadUser() throws InvalidRequestException {
         String expected = "Steven";
-            userService.createUser(expected);
-            String actual = userService.ReadByID(2).getName();
-            Assert.assertEquals(expected, actual);
+        userService.createUser(expected);
+        String actual = userService.ReadByID(2).getName();
+        Assert.assertEquals(expected, actual);
     }
 
     @Test(expected = InvalidRequestException.class)

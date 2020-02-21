@@ -33,8 +33,8 @@ public class UserDBTest {
 
     @Test
     public void shouldReturnUser_WhenRetrievingByID() {
-       User actual = database.getUserByID(1);
-       User expected = new User("Eathan");
+        User actual = database.getUserByID(1);
+        User expected = new User("Eathan");
         Assert.assertEquals(actual.getName(), expected.getName());
     }
 

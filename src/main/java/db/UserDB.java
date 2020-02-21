@@ -12,7 +12,7 @@ public class UserDB implements DB {
 
     @Override
     public User getUserByID(long ID) {
-            return users.get(ID);
+        return users.get(ID);
     }
 
     @Override

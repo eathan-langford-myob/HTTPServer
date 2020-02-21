@@ -13,6 +13,6 @@ public class UserHttpRequestValidator {
     }
 
     public static boolean isValidUpdateRequest(String urlRequest) {
-        return urlRequest.contains(",") && urlRequest.split(",").length==2;
+        return urlRequest.contains(",") && urlRequest.split(",").length == 2;
     }
 }

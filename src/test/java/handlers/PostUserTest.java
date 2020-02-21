@@ -26,8 +26,6 @@ public class PostUserTest {
     }
 
 
-
-
     @Test
     public void postEndpointAddsToData() {
         RequestSpecification request = RestAssured.given();

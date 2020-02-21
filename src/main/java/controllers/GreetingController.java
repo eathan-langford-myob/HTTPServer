@@ -1,6 +1,5 @@
 package controllers;
 
-import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import domain.UserService;
@@ -34,9 +33,6 @@ public class GreetingController implements HttpHandler {
             HttpUtils.writeResponse(StatusCodes.NOT_FOUND.getCode(), exchange, outputMessages.getString("path_error"));
             return;
         }
-
-        Headers responseHeaders = exchange.getResponseHeaders();
-        responseHeaders.set("Content-Type", "text/plain");
         String users = collectNames();
         String response = outputMessages.getString("hello") + users + outputMessages.getString("time") + new Date().toString();
         HttpUtils.writeResponse(StatusCodes.OK.getCode(), exchange, response);

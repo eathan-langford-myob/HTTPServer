@@ -18,7 +18,7 @@ public class HttpUtils {
         return response.hasNext() ? response.next() : "";
     }
 
-    public static void writeResponse ( int statusCode, HttpExchange exchange, String response) throws IOException {
+    public static void writeResponse(int statusCode, HttpExchange exchange, String response) throws IOException {
         exchange.sendResponseHeaders(statusCode, response.length());
         OutputStream os = exchange.getResponseBody();
         os.write(response.getBytes());

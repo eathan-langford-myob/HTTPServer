@@ -25,14 +25,13 @@ public class GetUserTest {
     }
 
 
-
     @Test
     public void shouldGetUser_WhenGivenID() {
         RequestSpecification request = RestAssured.given();
         request.body("Barry");
         request.post(testing.usersPath);
 
-        request.get(testing.usersPath+"/2")
+        request.get(testing.usersPath + "/2")
                 .then()
                 .body(equalTo("Barry"));
     }
@@ -41,7 +40,7 @@ public class GetUserTest {
     public void shouldGet405Error_WhenDoingUnsupportedRequest() {
         RequestSpecification request = RestAssured.given();
         request.body("Steve");
-        request.post(testing.usersPath+"/4")
+        request.post(testing.usersPath + "/4")
                 .then()
                 .statusCode(405)
                 .body(equalTo(testing.outputMessages.getString("request_error")));
@@ -50,7 +49,7 @@ public class GetUserTest {
     @Test
     public void shouldReturnErrorBody_WhenGivenWrongID() {
         RequestSpecification request = RestAssured.given();
-        request.get(testing.usersPath+"/2")
+        request.get(testing.usersPath + "/2")
                 .then()
                 .body(equalTo(testing.outputMessages.getString("error_getting_user")));
     }
@@ -63,7 +62,7 @@ public class GetUserTest {
 
         request.get(testing.usersPath)
                 .then()
-                .body(equalTo("[" +"1," + testing.admin.getName() +", "+ "2,Harry" + "]"));
+                .body(equalTo("[" + "1," + testing.admin.getName() + ", " + "2,Harry" + "]"));
     }
 }
 

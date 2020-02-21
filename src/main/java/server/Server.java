@@ -1,10 +1,10 @@
 package server;
 
 import com.sun.net.httpserver.HttpServer;
+import controllers.GreetingController;
 import controllers.UsersController;
 import controllers.UsersIDController;
 import db.UserDB;
-import controllers.GreetingController;
 import domain.UserService;
 
 import java.net.InetSocketAddress;
@@ -16,7 +16,7 @@ public class Server {
     private final UserService userService;
     private final ResourceBundle outputMessages;
 
-    public Server(UserDB DB){
+    public Server(UserDB DB) {
         Locale locale = new Locale("en", "AU");
         outputMessages = ResourceBundle.getBundle("OutputMessages", locale);
         this.userService = new UserService(DB, outputMessages);
